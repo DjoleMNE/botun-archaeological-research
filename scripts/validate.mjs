@@ -75,3 +75,14 @@ for(const txt of ["Podaci koje smo već koristili","Zvanični dokumenti i javni 
 }
 const kapStructure=currentKap.indexOf('id="kap-satelit"');
 assert(kapStructure>0&&kapStructure<currentKap.indexOf('id="kap-fakti"'),"KAP actual images must come before background text");
+
+for (const page of pages) {
+ const s=fs.readFileSync(page,"utf8");
+ for (const selector of ['<nav class="site-nav" aria-label="Glavna navigacija">','<nav aria-label="Navigacija za telefon">']) {
+  const start=s.indexOf(selector),end=s.indexOf("</nav>",start);
+  assert(start>=0&&end>start,page+": missing navigation");
+  const links=[...s.slice(start+selector.length,end).matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>[^<]+<\/a>/g)].map(m=>m[1]);
+  assert(links.length>=5,page+": unexpected link count");
+  assert(links.at(-1)==="mapa.html",page+": Mapa must be the rightmost/last navigation link");
+ }
+}
