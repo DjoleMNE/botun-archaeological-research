@@ -1,5 +1,6 @@
 
-const fs=require("fs"),assert=require("assert");
+import fs from "node:fs";
+import assert from "node:assert/strict";
 const pages=["index.html","mapa.html","istrazivanje.html","metod.html","dnevnik.html","o-projektu.html","404.html"];
 for(const name of pages){
  const s=fs.readFileSync(name,"utf8");
