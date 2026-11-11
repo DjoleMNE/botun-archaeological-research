@@ -78,3 +78,12 @@
 .verdict-card p{font-size:.94rem;color:var(--muted);margin-bottom:0}
 @media(max-width:850px){.evidence-gallery,.verdict-grid{grid-template-columns:1fr}.evidence-figure .figure-link img{max-height:none}}
 @media(max-width:520px){.evidence-figure figcaption{padding:15px 17px 20px}.evidence-figure .figure-link{min-height:unset}.example-visual figcaption{padding:11px 14px;font-size:.84rem}.direct-answer,.finding-empty{padding:14px 15px}}
+
+.existing-sites{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.existing-sites article{background:#fff;border:1px solid #d5e1d5;border-radius:12px;padding:21px 22px}
+.existing-label{font-size:.77rem;font-weight:850;color:#2b6a50}
+.existing-sites article h3{font-size:1.22rem;margin:12px 0}
+.existing-sites article p{color:var(--muted);font-size:.91rem}
+.existing-source{margin-top:19px;border-left:4px solid #779a79;background:#eef3eb;padding:18px 23px;border-radius:8px;line-height:1.65}
+.existing-source p{font-size:.88rem;color:#52635a;margin-bottom:0}
+@media(max-width:920px){.existing-sites{grid-template-columns:1fr}}
