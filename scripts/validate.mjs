@@ -106,3 +106,17 @@ for(const nm of ["ESA WorldCover","JRC Global Surface Water"]){
 }
 assert(newSources.entries.some(x=>x.name.includes("Podgorica")), "Previously documented municipal sources lost");
 assert(newSources.entries.some(x=>x.name==="Copernicus Sentinel-1"&&x.status==="candidate"),"Unacquired radar incorrectly promoted");
+
+/* AI research update R-015: public-safe zonal and historical summaries. */
+const phaseStudy=fs.readFileSync("istrazivanje.html","utf8");
+for(const s of ["analiza-po-zonama","provjera-reljefa","Šest ranije zabilježenih mjesta","1.036","706","420"]){
+ assert(phaseStudy.includes(s),"Missing phase research output: "+s);
+}
+assert(!phaseStudy.includes("results/phase4_screen/"),"Private screening source may not be public");
+const phaseData=JSON.parse(fs.readFileSync("data/pregled-po-zonama.json","utf8"));
+assert(phaseData.zone_data.length===3,"Zone count must be three");
+assert(phaseData.zone_data.reduce((a,x)=>a+x.gedi,0)===98448,"Zone GEDI total mismatch");
+assert(phaseData.zone_data.reduce((a,x)=>a+x.icesat,0)===27535,"Zone ICESat total mismatch");
+assert(phaseData.historic.records.length===6,"Six documented historical references expected");
+assert(phaseData.historic.records.every(x=>!Object.keys(x).some(k=>/coord|lat|lon/i.test(k))),"Do not publish site coordinates");
+assert(phaseData.screening.archaeological_candidates===0,"No confirmed AI archaeological candidates");

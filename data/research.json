@@ -43,6 +43,20 @@
       "status": "blocked",
       "note": "Pronađen je zvanični opis znatno detaljnijeg modela terena DTM01, sa razmakom od jednog metra. Podaci za Botun i uslovi njihovog korišćenja još nijesu pribavljeni.",
       "source_url": "https://smatsa.rs/upload/vfraip/published/pdf/gen/VFR_LY_GEN_3_1_en.pdf"
+    },
+    {
+      "id": "worldcover2021",
+      "name": "ESA WorldCover 2021",
+      "status": "in_progress",
+      "note": "Preuzeta je i objavljena na sajtu karta pokrivača zemljišta za područje Botuna iz 2021. Automatska procjena može pogriješiti i ne predstavlja današnje stanje, vlasništvo ili arheološke nalaze.",
+      "source_url": "https://esa-worldcover.org/en/data-access"
+    },
+    {
+      "id": "jrcwater",
+      "name": "Istorija površinskih voda",
+      "status": "in_progress",
+      "note": "Preuzeta je i objavljena karta istorijske učestalosti površinske vode za period 1984–2024. Podaci ne pokazuju današnju vodu, njenu hemiju, podzemnu vodu ili rizik od poplave.",
+      "source_url": "https://global-surface-water.appspot.com/download"
     }
   ],
   "updates": [
@@ -70,6 +84,41 @@
       "date": "2026-11-11",
       "title": "Dodatna provjera pouzdanosti GEDI podataka",
       "description": "Provjerena su još dva niza GEDI mjerenja iz novijeg izdanja podataka. Neka prolaze osnovnu provjeru, ali nose dodatno upozorenje o pouzdanosti položaja. Zato nijesu uvrštena u pouzdanije podatke našeg početnog pregleda. Raniji zbir nije promijenjen. Ovo nije dokaz arheoloških ostataka; rezultate nije provjerio čovjek."
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Završena dodatna provjera jednog GEDI prolaza",
+      "description": "Provjereno je svih osam laserskih nizova u jednom GEDI zapisu. Mjerenja koja prolaze osnovnu provjeru i dalje nose upozorenje o pouzdanosti položaja. Postojećim ICESat-2 podacima dodate su ocjene kvaliteta procjene visine tla. Te ocjene nijesu garancija tačnosti niti dokaz arheoloških ostataka. Raniji zbir mjerenja nije promijenjen; rezultate nije provjerio čovjek."
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Provjera pristupa detaljnijim državnim podacima",
+      "description": "Pronađen je zvanični kontakt za upite i dopunjen nacrt zahtjeva za detaljnije modele terena i snimke iz vazduha. Zahtjev još nije poslat, a podaci nijesu preuzeti. Mogućnost pregledanja na portalu ne znači automatski da su dozvoljeni preuzimanje i objavljivanje snimaka."
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Prvi zasebni satelitski prikaz KAP-a i okoline",
+      "description": "Pripremljeno je poređenje stvarnih snimaka iz aprila i oktobra 2026. Pronađen je i geodetski crtež koji označava oba bazena crvenog mulja. Njegovo tačno postavljanje na satelitsku kartu još nije završeno, pa granice nijesu ucrtane. Boja na snimku ne pokazuje hemijski sastav, zagađenje ili bezbjednost. Rezultate nije provjerio čovjek."
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Izdvojeni probni obrisi oba bazena",
+      "description": "Iz zvaničnog crteža izdvojeni su obrisi označeni kao bazeni A i B i probno postavljeni preko satelitskog snimka. Položaj odgovara vidljivim bazenima, ali granice još nijesu nezavisno provjerene. Zato probni obrisi nijesu objavljeni kao zvanična karta. Rezultate nije provjerio čovjek."
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Bliži satelitski prikazi bazena iz 2021. i 2026.",
+      "description": "Preuzeti su stvarni snimci bazena i neposredne okoline iz septembra 2021, aprila 2026. i oktobra 2026. Pripremljena su dva poređenja sa istom razmjerom i podešavanjem boja. Razlike u izgledu ne dokazuju zagađenje, uzrok promjene ili završetak sanacije. Linije sa starijeg crteža označene su kao obala, a ne potvrđene pravne granice. Rezultate nije provjerio čovjek."
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Pet jesenjih prikaza bazena i nove regionalne karte",
+      "description": "Dodati su snimci bazena iz 2023, 2024. i 2025. godine, pa sada možemo uporediti pet jesenjih datuma. Obrađene su i karte pokrivača zemljišta i istorije površinskih voda za šire područje. Granice bazena i dalje se provjeravaju. Dodatni pokušaj pristupa nedostajućim GEDI podacima nije promijenio ranije zbirne rezultate. Rezultate nije provjerio čovjek."
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Pregled po zonama i provjera istorijskih izvora",
+      "description": "Podaci su dodatno obrađeni za područja do 3 km, od 3 do 5 km i od 5 do 10 km od Botuna. Razlike u pet zapisa iz jednog poređenja NASA verzija potiču od pomjeranja koordinata preko granice područja. Pregled krupnih oblika terena nije dao osnov da se proglasi arheološki kandidat. Opštinski dokument daje tragove za dalju istorijsku provjeru. Brojevi ranije obrađenih laserskih mjerenja ostaju isti; potpunost podataka još se provjerava. Rezultate nije provjerio čovjek."
     }
   ]
 }

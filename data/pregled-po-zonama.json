@@ -1,0 +1,115 @@
+{
+  "date": "2026-11-11",
+  "source": "Izvještaj AI istraživačkog agenta, faze 1, 2, 4 i 5",
+  "verified_by_human": false,
+  "zone_data": [
+    {
+      "zone": "0–3 km",
+      "area_km2": 28.268591808290356,
+      "gedi": 8386,
+      "gedi_screen": 1576,
+      "icesat": 2550,
+      "icesat_screen": 1825,
+      "median_elevation_m": 26.177318572998047,
+      "sentinel_pair_median": -0.178093820810318,
+      "landsat_pair_median": -0.17388653755187988
+    },
+    {
+      "zone": "3–5 km",
+      "area_km2": 50.25527175582539,
+      "gedi": 14490,
+      "gedi_screen": 2932,
+      "icesat": 4939,
+      "icesat_screen": 2439,
+      "median_elevation_m": 38.285377502441406,
+      "sentinel_pair_median": -0.15158087015151978,
+      "landsat_pair_median": -0.10566592216491699
+    },
+    {
+      "zone": "5–10 km",
+      "area_km2": 235.57154249408168,
+      "gedi": 75572,
+      "gedi_screen": 26819,
+      "icesat": 20046,
+      "icesat_screen": 9768,
+      "median_elevation_m": 50.560523986816406,
+      "sentinel_pair_median": -0.15062934160232544,
+      "landsat_pair_median": -0.08563804626464844
+    }
+  ],
+  "satellite_dates": {
+    "sentinel_2026": [
+      "2026-04-25",
+      "2026-10-04"
+    ],
+    "landsat_2016_2026": [
+      "2016-09-25",
+      "2026-09-05"
+    ]
+  },
+  "screening": {
+    "model_pixel_size_m": 30,
+    "height_thresholds_m": [
+      2,
+      5,
+      10
+    ],
+    "patches": [
+      1036,
+      706,
+      420
+    ],
+    "reviewed_images": 12,
+    "archaeological_candidates": 0
+  },
+  "historic": {
+    "source_url": "https://skupstina.podgorica.me/wp-content/uploads/2025/11/Tekstualni-dio.pdf",
+    "source_page": 174,
+    "records": [
+      {
+        "name": "Crkva Sv. Petke, Grbavci",
+        "source_row": 55,
+        "source_type": "Sakralna arhitektura",
+        "listing_basis": "SZ NPSJ 2017."
+      },
+      {
+        "name": "Lokalitet Lekići - stara crkva, Grbavci",
+        "source_row": 63,
+        "source_type": "Arheologija",
+        "listing_basis": "Inicijativa"
+      },
+      {
+        "name": "Lokalitet Divangrad, Grbavci",
+        "source_row": 64,
+        "source_type": "Arheologija",
+        "listing_basis": "Inicijativa"
+      },
+      {
+        "name": "Buac (staro groblje, nadgrobne ploče), Grbavci",
+        "source_row": 65,
+        "source_type": "Arheologija",
+        "listing_basis": "Inicijativa"
+      },
+      {
+        "name": "Crkva sv. Nikole, Gornji Kokoti",
+        "source_row": 70,
+        "source_type": "Sakralna arhitektura",
+        "listing_basis": "Stručna saznanja"
+      },
+      {
+        "name": "Crkva sv. Nikole, Donji Kokoti",
+        "source_row": 71,
+        "source_type": "Sakralna arhitektura",
+        "listing_basis": "Stručna saznanja"
+      }
+    ]
+  },
+  "warnings": [
+    "Brojevi mjerenja nijesu pokrivenost površine.",
+    "Samo dva snimka ne prikazuju trend.",
+    "Izdvojeni oblici nijesu arheološki nalazi.",
+    "Istorijski zapisi ne potvrđuju pravnu zaštitu, starost ili geografski položaj.",
+    "Nijedan čovjek nije provjerio ovu AI analizu."
+  ],
+  "phase3": "preskočena prema instrukciji vlasnika"
+}
