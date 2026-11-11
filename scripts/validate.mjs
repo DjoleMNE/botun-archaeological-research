@@ -24,3 +24,4 @@ assert(css.includes("max-width:650px")&&css.includes(".image-modal"),"responsive
 assert(js.includes("analysis-notes")&&js.includes("data-viewer")&&js.includes("research-map"),"interactive features");
 for(const p of pages){const s=fs.readFileSync(p,"utf8");assert(!/results\/(phase4_|collector_followup|kap_validation_followup)/.test(s),p+": private exploratory paths should not leak");}
 console.log("Provjera gotova: osam stranica, čista navigacija, stvarni prikazi, javni izvori i ograničenja su sačuvani.");
+for(const f of ["gedi_mjerenja_po_zonama_me.svg","icesat2_mjerenja_po_zonama_me.svg"]){const s=fs.readFileSync("assets/figures/"+f,"utf8");assert(s.includes("<svg")&&s.includes("Početni filter")&&s.includes("Brojevi nijesu"),"Source-derived laser chart missing "+f);assert(fs.readFileSync("istrazivanje.html","utf8").includes(f),"Laser chart not visible "+f);}

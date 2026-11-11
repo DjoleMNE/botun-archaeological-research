@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690" role="img" aria-labelledby="t d">
+ <title id="t">NASA GEDI · pregled po zonama</title><desc id="d">Stvarni zbirni brojevi NASA mjerenja po tri zone oko Botuna, sa brojem zapisa koji prolaze početnu AI provjeru kvaliteta. Ovo nijesu nove 3D laserske slike terena ili procenat skeniranog zemljišta.</desc>
+ <rect x="0" y="0" width="1200" height="690" rx="16" fill="#f6f9f5"/>
+ <text x="59" y="72" font-family="system-ui, sans-serif" font-size="43" font-weight="800" fill="#183d30">NASA GEDI · pregled po zonama</text>
+ <text x="61" y="118" font-family="system-ui, sans-serif" font-size="24" fill="#537064">Podaci iz tri zone istraživanja · obrađeno 11. novembra 2026.</text>
+ <rect x="61" y="149" width="26" height="19" rx="5" fill="#9ec5a0"/><text x="101" y="168" font-family="system-ui, sans-serif" font-size="23" fill="#426458">Svi zabilježeni GEDI zapisi</text>
+ <rect x="545" y="149" width="26" height="19" rx="5" fill="#24654d"/><text x="585" y="168" font-family="system-ui, sans-serif" font-size="23" fill="#426458">Prolaze početni računarski filter</text>
+ <g><text x="60" y="255" font-family="system-ui, sans-serif" font-size="32" fill="#25453d" font-weight="700">Do 3 km</text>
+ <rect x="285" y="225" width="710" height="35" rx="13" fill="#e5eee7"/>
+ <rect x="285" y="225" width="78.8" height="35" rx="13" fill="#9ec5a0"/>
+ <rect x="285" y="225" width="14.8" height="35" rx="13" fill="#24654d"/>
+ <text x="285" y="300" font-family="system-ui, sans-serif" font-size="24" fill="#5f7064">Mjerenja: 8.386   ·   Početni filter: 1.576 (19%)</text></g>
+<g><text x="60" y="382" font-family="system-ui, sans-serif" font-size="32" fill="#25453d" font-weight="700">3–5 km</text>
+ <rect x="285" y="352" width="710" height="35" rx="13" fill="#e5eee7"/>
+ <rect x="285" y="352" width="136.1" height="35" rx="13" fill="#9ec5a0"/>
+ <rect x="285" y="352" width="27.5" height="35" rx="13" fill="#24654d"/>
+ <text x="285" y="427" font-family="system-ui, sans-serif" font-size="24" fill="#5f7064">Mjerenja: 14.490   ·   Početni filter: 2.932 (20%)</text></g>
+<g><text x="60" y="509" font-family="system-ui, sans-serif" font-size="32" fill="#25453d" font-weight="700">5–10 km</text>
+ <rect x="285" y="479" width="710" height="35" rx="13" fill="#e5eee7"/>
+ <rect x="285" y="479" width="710.0" height="35" rx="13" fill="#9ec5a0"/>
+ <rect x="285" y="479" width="252.0" height="35" rx="13" fill="#24654d"/>
+ <text x="285" y="554" font-family="system-ui, sans-serif" font-size="24" fill="#5f7064">Mjerenja: 75.572   ·   Početni filter: 26.819 (35%)</text></g>
+ <path d="M59 598 H1142" stroke="#d7e2d9" stroke-width="2"/>
+ <text x="61" y="634" font-family="system-ui, sans-serif" font-size="22" fill="#5b6e61">Izvor: NASA GEDI L2A V002 · lokalna obrada iz javnih podataka</text>
+ <text x="61" y="665" font-family="system-ui, sans-serif" font-size="21" fill="#766448">Zone nijesu jednake površine. Brojevi nijesu procenat snimljenog tla niti arheološki kandidati.</text>
+ </svg>
