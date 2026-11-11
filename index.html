@@ -9,6 +9,8 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
   
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script defer src="assets/app.js"></script>
 </head>
 <body>
@@ -37,21 +39,48 @@
    <div class="hero-actions"><a class="button button-main" href="mapa.html">Pogledaj mapu istraživanja <span aria-hidden="true">↗</span></a><a class="button button-outline" href="istrazivanje.html">Šta smo do sada uradili</a></div>
    <p class="hero-note">Za sada nije potvrđeno nijedno novo arheološko nalazište. Rezultati nijesu prošli ljudsku provjeru.</p>
   </div>
-  <div class="hero-graphic" aria-label="Ilustrativni prikaz područja istraživanja, ne stvarni laserski snimak">
-   <div class="orbit orbit-ten"><span>10 km</span></div><div class="orbit orbit-five"><span>5 km</span></div><div class="orbit orbit-three"><span>3 km</span></div>
-   <div class="map-cross"><span class="cross-dot"></span><strong>BOTUN</strong></div>
-   <div class="graphic-caption">Planirani obuhvat istraživanja<br><strong>približno 314 km²</strong></div>
-  </div>
+  <figure class="hero-live-map">
+    <div id="research-map" class="home-map" role="region" aria-label="Interaktivna karta Botuna sa tri planirana kruga istraživanja na pravoj kartografskoj podlozi"><p>Učitavanje mape Botuna...</p></div>
+    <figcaption><strong>Gdje se istražuje?</strong><span>Krugovi od 3, 5 i 10 km. Prikazane su planirane granice, a ne laserski snimljena površina.</span><a href="mapa.html">Pogledaj veću mapu →</a></figcaption>
+   </figure>
  </div>
 </section>
-<section class="section shell">
- <div class="section-heading"><div><span class="kicker">Ukratko</span><h2>Šta je do sada urađeno?</h2></div><p>Brojevi predstavljaju prikupljena satelitska mjerenja, a ne broj otkrivenih građevina niti procenat detaljno pregledanog terena.</p></div>
- <div class="metric-grid">
-  <article class="metric"><strong class="metric-num">98.448</strong><h3>Mjerenja NASA GEDI</h3><p>Pojedinačna laserska mjerenja unutar granice istraživanja. Dio njih je prošao početnu provjeru kvaliteta.</p><a href="istrazivanje.html#gedi">Šta to zapravo znači? →</a></article>
-  <article class="metric"><strong class="metric-num">27.535</strong><h3>Djelova tragova ICESat-2</h3><p>Satelit je mjerio visinu duž pojedinih putanja. To nije neprekidna slika svakog metra zemlje.</p><a href="istrazivanje.html#icesat2">Jednostavno objašnjenje →</a></article>
-  <article class="metric"><strong class="metric-num">10 km</strong><h3>Poluprečnik istraživanja</h3><p>Posmatramo Botun i okolinu u krugu od 10 kilometara. Tri manja područja služe da odredimo redosljed rada.</p><a href="mapa.html">Prikaži područje →</a></article>
-  <article class="metric metric-muted"><strong class="metric-num">Nema</strong><h3>Potvrđenih otkrića</h3><p>Nijedno novo arheološko nalazište nije dokazano. Istraživanje ne može zamijeniti provjeru arheologa na terenu.</p><a href="metod.html">Zašto je potreban oprez? →</a></article>
+
+<section id="najvaznije" class="section shell featured-results">
+ <div class="section-heading"><div><span class="kicker">Glavni rezultati — 11. novembar 2026.</span><h2>Šta do sada pokazuju podaci?</h2></div><p>Ovo su rezultati koje su izračunali AI agenti. Nije ih provjerio nijedan čovjek. Mjerenja nijesu isto što i otkrića.</p></div>
+ <article class="archaeology-status" aria-label="Status arheoloških otkrića">
+  <div class="archaeology-icon" aria-hidden="true">?</div>
+  <div><span class="kicker">Najvažniji zaključak za sada</span><h3>Nijedno novo arheološko otkriće nije potvrđeno.</h3><p>Uspjeli smo da prikupimo i obradimo satelitska mjerenja Botuna i okoline. Nijesmo dokazali postojanje novog nalazišta. Za takvu tvrdnju bili bi potrebni detaljniji podaci i provjera stručnjaka.</p></div>
+  <a href="metod.html">Zašto je to važno? →</a>
+ </article>
+ <div class="evidence-gallery">
+  <article class="evidence-card">
+   <div class="evidence-visual" role="img" aria-label="Dijagram: od 98.448 preuzetih GEDI laserskih mjerenja, 31.327 je prošlo početnu računarsku provjeru. To nije procenat snimljene zemlje.">
+    <div class="evidence-visual-head"><span class="evidence-kicker">NASA GEDI</span><strong>Laserska mjerenja</strong></div>
+    <div class="evidence-count">98.448 <small>prikupljenih mjerenja</small></div>
+    <div class="meter-label"><span>Prikupljena mjerenja</span><strong>98.448</strong></div>
+    <div class="meter-track"><span style="width:100%"></span></div>
+    <div class="meter-label"><span>Prošla početnu provjeru</span><strong>31.327</strong></div>
+    <div class="meter-track filtered"><span style="width:31.82%"></span></div>
+    <span class="graphic-qualifier">Trake prikazuju broj zapisa, ne površinu zemlje.</span>
+   </div>
+   <div class="evidence-card-copy"><span class="kicker">Prvi važan rezultat</span><h3>NASA laser jeste mjerio područje oko Botuna.</h3><p>AI agenti su pronašli pojedinačna mjerenja iz svemira. Njihova raspodjela nije ravnomjerna i ona ne prikazuju svaki dio terena.</p><a href="istrazivanje.html#gedi">Pogledaj objašnjenje →</a></div>
+  </article>
+  <article class="evidence-card">
+   <div class="evidence-visual evidence-blue" role="img" aria-label="Dijagram: od 27.535 djelova putanja satelita ICESat-2, 14.032 prošla su početnu računarsku provjeru. To nijesu pronađena arheološka mjesta.">
+    <div class="evidence-visual-head"><span class="evidence-kicker">NASA ICESat-2</span><strong>Mjerenja duž putanja</strong></div>
+    <div class="evidence-count">27.535 <small>djelova putanja</small></div>
+    <div class="meter-label"><span>Prikupljeni zapisi</span><strong>27.535</strong></div>
+    <div class="meter-track"><span style="width:100%"></span></div>
+    <div class="meter-label"><span>Prošli početnu provjeru</span><strong>14.032</strong></div>
+    <div class="meter-track filtered"><span style="width:50.96%"></span></div>
+    <span class="graphic-qualifier">Različiti sateliti i provjere: ove dvije trake ne služe za poređenje tačnosti satelita.</span>
+   </div>
+   <div class="evidence-card-copy"><span class="kicker">Drugi važan rezultat</span><h3>Provjerili smo i drugu vrstu laserskih podataka.</h3><p>Uz mjerenja visine obrađeni su i dodatni podaci o atmosferskim uslovima. To pomaže u procjeni kvaliteta, ali samo po sebi ništa ne govori o arheološkim ostacima.</p><a href="istrazivanje.html#icesat2">Šta znače ovi brojevi? →</a></div>
+  </article>
  </div>
+ <div class="visual-next"><div><span class="kicker">Sljedeće na sajtu</span><h3>Stvarne NASA mape mjerenja i prikazi terena</h3><p>Istraživački AI agent priprema slike sa crnogorskim oznakama i jasnim izvorima. Objavićemo ih ovdje kada se provjeri da su pogodne za javno prikazivanje. Do tada nećemo predstavljati ilustracije kao stvarne snimke.</p></div><a class="button button-light" href="dnevnik.html">Prati napredak →</a></div>
+ <p class="evidence-provenance">Izvor rezultata: javni podaci NASA GEDI i ICESat-2, obrađeni od strane AI agenata 11. novembra 2026. <a href="o-projektu.html#izvori">Pogledaj izvore</a>. Broj zapisa nije površina snimljenog zemljišta niti broj pronađenih arheoloških ostataka.</p>
 </section>
 <section class="section section-tint"><div class="shell split">
  <div><span class="kicker">Zašto Botun?</span><h2>Priča koja počinje u rodnom kraju</h2><p>Đorđe Vukčević je rođen i odrastao u Botunu. Na njegov zahtjev, AI agenti istražuju kako se savremeni javni podaci mogu upotrijebiti da se bolje upozna istorija ovog kraja.</p><p>Ovdje se ne traga za senzacionalnim naslovima. Važnije je pokazati šta je stvarno izmjereno, šta tek pretpostavljamo i šta još ne znamo.</p></div>
