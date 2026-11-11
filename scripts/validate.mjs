@@ -19,4 +19,13 @@ for(const d of data.datasets){assert(/^https:\/\//.test(d.source_url),"missing s
 const g=JSON.parse(fs.readFileSync("data/study-area.geojson","utf8"));
 const radii=g.features.filter(f=>f.properties&&f.properties.radius_m).map(f=>f.properties.radius_m).sort((a,b)=>a-b);
 assert.deepStrictEqual(radii,[3000,5000,10000],"study rings must remain 3/5/10 km");
+
+const homepage=fs.readFileSync("index.html","utf8");
+for(const phrase of ['id="research-map"','Nijedno novo arheološko otkriće nije potvrđeno.','98.448','31.327','27.535','14.032','Planirani istraživački obuhvat']){
+  assert(homepage.includes(phrase)|| (phrase==="Planirani istraživački obuhvat" && homepage.includes("planirane granice")), "Homepage missing prominent evidence or map context: "+phrase);
+}
+assert(homepage.includes("leaflet.js"),"Interactive homepage map must load map library");
+assert(homepage.includes("ne prikazuju") || homepage.includes("ne prikazuju površinu") || homepage.includes("ne služe za poređenje"),"Explain what graphics do not measure");
+const updates=data.updates||[];
+assert(updates.length>=2,"Research log must include most recent public-safe update");
 console.log("Provjera završena: sve javne stranice sadrže obavještenje, a javni podaci i granice odgovaraju osnovnim pravilima.");
