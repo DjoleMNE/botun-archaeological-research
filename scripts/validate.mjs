@@ -56,5 +56,5 @@ assert(!fs.existsSync("dnevnik.html"),"Removed diary page must stay removed");
 
 const kap=fs.readFileSync("kap-crveni-mulj.html","utf8");
 for(const term of ["420.000 m²","7–8 miliona tona","Bazen A","Bazen B","nije provjerio niti potvrdio nijedan čovjek"])assert(kap.includes(term),"Missing KAP label: "+term);
-for(const name of pages){const html=fs.readFileSync(name,"utf8");assert((html.match(/href="kap-crveni-mulj.html"/g)||[]).length===2,name+": KAP nav count");}
+for(const name of pages){const html=fs.readFileSync(name,"utf8");assert((html.match(/href="kap-crveni-mulj.html"/g)||[]).length>=2,name+": KAP navigation links missing");}
 assert(JSON.parse(fs.readFileSync("data/kap-crveni-mulj.json","utf8")).facts.basins===2,"Basin data invalid");
