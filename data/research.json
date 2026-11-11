@@ -55,6 +55,21 @@
       "date": "2026-11-11",
       "title": "Dodatna provjera pouzdanosti satelitskih mjerenja",
       "description": "Postojećim zapisima ICESat-2 pridruženi su podaci o atmosferskim uslovima, bez promjene prvobitnog broja mjerenja. Oni pomažu u procjeni pouzdanosti. Rezultate nije provjerio čovjek i oni ne potvrđuju arheološke ostatke."
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Probno preuzimanje novijeg izdanja GEDI podataka",
+      "description": "Probno su preuzeta mjerenja iz novijeg izdanja GEDI podataka. To su ponovo obrađena postojeća mjerenja, pa nijesu dodata ranijem zbiru. Ovaj mali uzorak ne prolazi ugrađene provjere kvaliteta i ne pruža dokaz arheoloških ostataka. Rezultate nije provjerio čovjek."
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Novi prikazi predjela i dodatna provjera mjerenja",
+      "description": "Pripremljeni su prikaz visina i poređenje stvarnih proljećnih i jesenjih snimaka. Oni prikazuju širi predio, ali ne potvrđuju arheološke ostatke. Dodatna provjera malog uzorka GEDI podataka potvrđuje da ne prolazi propisane provjere kvaliteta. Raniji broj mjerenja nije promijenjen. Rezultate nije provjerio čovjek."
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Dodatna provjera pouzdanosti GEDI podataka",
+      "description": "Provjerena su još dva niza GEDI mjerenja iz novijeg izdanja podataka. Neka prolaze osnovnu provjeru, ali nose dodatno upozorenje o pouzdanosti položaja. Zato nijesu uvrštena u pouzdanije podatke našeg početnog pregleda. Raniji zbir nije promijenjen. Ovo nije dokaz arheoloških ostataka; rezultate nije provjerio čovjek."
     }
   ]
 }

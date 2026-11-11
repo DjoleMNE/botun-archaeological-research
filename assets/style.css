@@ -278,3 +278,23 @@
   .map-note .note-badge{display:inline-block;margin-bottom:8px}
   .meter-label{gap:9px}
 }
+
+
+/* Actual NASADEM and Copernicus landscape figures, with accessible captions */
+.landscape-section{padding-top:72px;padding-bottom:78px;background:#f1f5f1}
+.landscape-heading{align-items:flex-end}
+.landscape-heading>p{max-width:400px}
+.landscape-intro{border-left:5px solid #2d7761;border-radius:9px;background:#e0efe3;padding:18px 22px;margin:0 0 24px;font-size:1.05rem;line-height:1.65}
+.landscape-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch}
+.landscape-card{min-width:0;margin:0;display:flex;flex-direction:column;background:white;border-radius:14px;overflow:hidden;border:1px solid #ccdcd2;box-shadow:0 8px 24px rgba(17,55,36,.09)}
+.landscape-card-image{display:block;min-width:0;width:100%;background:#eaf1ed;border-bottom:1px solid #d5e2d7}
+.landscape-card-image img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.landscape-card figcaption{display:flex;flex-direction:column;align-items:flex-start;flex:1;padding:22px 24px 25px}
+.landscape-card figcaption h3{font-size:1.45rem;line-height:1.25;margin:7px 0 15px}
+.landscape-card figcaption p{font-size:1rem;line-height:1.65;color:#485b53;margin:3px 0 15px}
+.landscape-card .landscape-warning{border-left:3px solid #bd9b53;padding:9px 12px;background:#fbf7ed;color:#554a31}
+.landscape-card .landscape-attribution{font-size:.84rem;color:#5a6a60;margin-top:auto}
+.landscape-card .landscape-enlarge{display:inline-flex;align-items:center;justify-content:center;min-height:46px;border-radius:9px;margin-top:8px;padding:10px 14px;background:#e3efe4;font-size:.92rem;font-weight:800;text-decoration:none}
+.landscape-summary{color:#52645b;max-width:1000px;font-size:.92rem;line-height:1.65;margin:22px 0 0}
+@media(max-width:850px){.landscape-grid{grid-template-columns:minmax(0,1fr);gap:22px}.landscape-card{max-width:680px;width:100%;margin:0 auto}}
+@media(max-width:780px){.landscape-section{padding-top:44px;padding-bottom:48px}.landscape-heading>p{max-width:none}.landscape-intro{font-size:1rem;padding:15px 17px}.landscape-card figcaption{padding:18px}.landscape-card figcaption h3{font-size:1.3rem}.landscape-card .landscape-attribution{font-size:.9rem}.landscape-summary{font-size:1rem}}

@@ -40,3 +40,16 @@ for(const name of pages){
  assert(markup.includes('aria-label="Navigacija za telefon"'),name+": missing accessible phone nav");
  assert(!markup.includes('href="dnevnik.html"'),name+": orphaned diary link");
 }
+
+const landscapePages=["index.html","istrazivanje.html"];
+for(const name of landscapePages){
+ const s=fs.readFileSync(name,"utf8");
+ assert(s.includes("nasadem_relief_me.svg"),name+": no NASADEM figure");
+ assert(s.includes("sentinel_godisnja_doba_me.svg"),name+": no Sentinel-2 figure");
+ assert(s.includes('id="pravi-predio"'),name+": missing landscape section");
+ assert(s.includes("bez ljudske provjere"),name+": missing human-verification caveat near figures");
+}
+for(const file of ["assets/figures/nasadem_relief_me.svg","assets/figures/sentinel_godisnja_doba_me.svg"]){
+ assert(fs.statSync(file).size>100000,file+": missing original scientific figure");
+}
+assert(!fs.existsSync("dnevnik.html"),"Removed diary page must stay removed");
