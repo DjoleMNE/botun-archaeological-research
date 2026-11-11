@@ -3,7 +3,7 @@
   "use strict";
   var STATUS={planned:"Planirano",in_progress:"Istraživanje u toku",verified:"Podaci obrađeni",blocked:"Čeka se pristup",unavailable:"Nedostupno"};
   function el(tag, cls, txt){var x=document.createElement(tag);if(cls)x.className=cls;if(txt!==undefined)x.textContent=txt;return x;}
-  function safeDate(iso){var p=iso.split("-");return p.length===3?Number(p[2])+". "+({1:"januar",2:"februar",3:"mart",4:"april",5:"maj",6:"jun",7:"jul",8:"avgust",9:"septembar",10:"oktobar",11:"novembar",12:"decembar"}[Number(p[1])]||p[1])+" "+p[0]+".":iso;}
+  function safeDate(iso){var p=iso.split("-");return p.length===3?Number(p[2])+". "+({1:"januara",2:"februara",3:"marta",4:"aprila",5:"maja",6:"juna",7:"jula",8:"avgusta",9:"septembra",10:"oktobra",11:"novembra",12:"decembra"}[Number(p[1])]||p[1])+" "+p[0]+".":iso;}
   function renderData(data){
     var ds=document.getElementById("dataset-list");
     if(ds){ds.replaceChildren();(data.datasets||[]).forEach(function(d){
@@ -29,7 +29,8 @@
   if(mapDiv){
     if(typeof L==="undefined"){mapDiv.textContent="Mapa trenutno nije dostupna. Za učitavanje je potrebna internet veza.";return;}
     mapDiv.replaceChildren();
-    var map=L.map(mapDiv,{scrollWheelZoom:false}).setView([42.385,19.20],11);
+    var map=L.map(mapDiv,{scrollWheelZoom:false,zoomControl:false}).setView([42.385,19.20],11);
+    L.control.zoom({zoomInTitle:"Uvećaj mapu",zoomOutTitle:"Umanji mapu",zoomInText:"+",zoomOutText:"−"}).addTo(map);
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
       maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> saradnici'
     }).addTo(map);
