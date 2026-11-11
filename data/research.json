@@ -1,0 +1,55 @@
+{
+  "updated_at": "2026-11-11",
+  "review_note": "Ovaj prikaz je pripremila vještačka inteligencija. Nijedan čovjek nije nezavisno provjerio rezultate.",
+  "datasets": [
+    {
+      "id": "gedi",
+      "name": "NASA GEDI",
+      "status": "in_progress",
+      "note": "U području istraživanja pronađeno je 98.448 pojedinačnih laserskih mjerenja. Njih 31.327 zadovoljilo je početne uslove kvaliteta. To nije neprekidan snimak cijelog zemljišta, a podaci još nijesu u potpunosti obrađeni.",
+      "source_url": "https://search.earthdata.nasa.gov/"
+    },
+    {
+      "id": "icesat2",
+      "name": "NASA ICESat-2",
+      "status": "in_progress",
+      "note": "Analizirano je 27.535 djelova laserskih putanja, a 14.032 su prošla početnu računarsku provjeru. Posebno je pregledan jedan uzorak od 6.313 laserskih odraza. To ne pokazuje svaki metar zemljišta.",
+      "source_url": "https://nsidc.org/data/atl08/versions/7"
+    },
+    {
+      "id": "terrain",
+      "name": "Modeli visine zemljišta",
+      "status": "verified",
+      "note": "Preuzeti su Copernicus GLO-30 i NASADEM. Oni pokazuju širi oblik predjela, ali nijesu dovoljno detaljni da potvrde male zidove, temelje ili humke.",
+      "source_url": "https://planetarycomputer.microsoft.com/dataset/nasadem"
+    },
+    {
+      "id": "sentinel2",
+      "name": "Satelitski snimci Sentinel-2",
+      "status": "verified",
+      "note": "Upoređeni su javno dostupni snimci iz aprila i oktobra 2026. Razlike u vegetaciji mogu nastati zbog godišnjeg doba i poljoprivrede; nijesu dokaz arheoloških ostataka.",
+      "source_url": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a"
+    },
+    {
+      "id": "landsat",
+      "name": "Satelitski snimci Landsat",
+      "status": "verified",
+      "note": "Upoređeni su odabrani snimci iz 2016. i 2026. godine. Samo dva snimka ne mogu pokazati pouzdan dugoročni trend niti potvrditi ostatke prošlih naselja.",
+      "source_url": "https://www.usgs.gov/landsat-missions/landsat-collection-2-level-2-science-products"
+    },
+    {
+      "id": "dtm01",
+      "name": "Crnogorski detaljni model terena DTM01",
+      "status": "blocked",
+      "note": "Pronađene su javne zvanične specifikacije modela. Podaci za Botun, uslovi pristupa i dozvola za korišćenje još nijesu pribavljeni za ovaj projekat. Ne znamo da li se potrebni detaljni snimci mogu dobiti.",
+      "source_url": "https://smatsa.rs/upload/vfraip/published/pdf/gen/VFR_LY_GEN_3_1_en.pdf"
+    }
+  ],
+  "updates": [
+    {
+      "date": "2026-11-11",
+      "title": "Prvi pregled satelitskih mjerenja i predjela",
+      "description": "AI agenti su analizirali laserska mjerenja, modele visine i odabrane satelitske snimke Botuna i okoline. Nije potvrđeno nijedno arheološko otkriće. Potrebni su detaljniji podaci i nezavisna ljudska provjera."
+    }
+  ]
+}
