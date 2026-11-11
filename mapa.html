@@ -1,62 +1,28 @@
 <!doctype html>
 <html lang="cnr-Latn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <meta name="description" content="Interaktivna mapa planiranog područja istraživanja Botuna od 3, 5 i 10 kilometara.">
-  <title>Mapa istraživanja · Botun — Tragovi prošlosti</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script defer src="assets/app.js"></script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light">
+<meta name="description" content="Interaktivna mapa istraživačkih zona 3, 5 i 10 km oko Botuna."><title>Mapa · Botun — Tragovi iz podataka</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script defer src="assets/app.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#sadrzaj">Preskoči na sadržaj</a>
-<header class="site-header">
-  <div class="shell header-inner">
-    <a class="brand" href="index.html" aria-label="Botun — početna stranica"><span class="brand-symbol" aria-hidden="true">◎</span><span>BOTUN <small>TRAGOVI PROŠLOSTI</small></span></a>
-    <nav class="site-nav" aria-label="Glavna navigacija"><a href="index.html">Početna</a>
-<a href="istrazivanje.html">Šta smo pronašli u podacima</a>
-<a href="metod.html">Kako istražujemo</a>
-<a href="kap-crveni-mulj.html">KAP i crveni mulj</a>
-<a href="kolektor-botun.html">Kolektor Botun</a>
-<a href="o-projektu.html">O projektu</a>
-<a href="mapa.html" aria-current="page">Mapa</a></nav>
-    <details class="mobile-navigation"><summary aria-label="Otvori meni za navigaciju"><span class="menu-bars" aria-hidden="true">☰</span> Meni</summary><nav aria-label="Navigacija za telefon"><a href="index.html">Početna</a>
-<a href="istrazivanje.html">Šta smo pronašli u podacima</a>
-<a href="metod.html">Kako istražujemo</a>
-<a href="kap-crveni-mulj.html">KAP i crveni mulj</a>
-<a href="kolektor-botun.html">Kolektor Botun</a>
-<a href="o-projektu.html">O projektu</a>
-<a href="mapa.html" aria-current="page">Mapa</a></nav></details>
-  </div>
-</header>
-<div class="site-notice" role="note" aria-label="Obavještenje o porijeklu i provjeri istraživanja">
-  <div class="shell notice-inner"><span class="notice-icon" aria-hidden="true">!</span><div><strong>Važno: rad AI agenata, bez ljudske provjere.</strong><p>Ovaj sajt, njegov tekst, mape i analize pripremili su isključivo AI agenti, na zahtjev Đorđa Vukčevića, koristeći isključivo javno dostupne izvore, uključujući podatke NASA-e, programa Copernicus i USGS-a. Rezultate, analize i zaključke ovog projekta nije provjerio niti potvrdio nijedan čovjek — ni Đorđe Vukčević ni bilo koji drugi istraživač ili stručnjak. Sve je preliminarno i ne predstavlja potvrdu arheološkog otkrića.</p></div></div>
-</div>
-<main id="sadrzaj">
-<section class="page-intro shell"><span class="kicker">Prostor koji istražujemo</span><h1>Mapa Botuna i okoline</h1><p>Krugovi pokazuju <strong>gdje planiramo da analiziramo podatke</strong>. Oni ne znače da je svaki dio terena snimljen laserom ili arheološki pregledan.</p></section>
-<section class="shell map-layout">
- <div class="map-toolbar" role="group" aria-label="Izbor prikazanih granica">
-  <label><input type="checkbox" data-ring="3000" checked> 3 km — najbliža okolina</label>
-  <label><input type="checkbox" data-ring="5000" checked> 5 km — šira okolina</label>
-  <label><input type="checkbox" data-ring="10000" checked> 10 km — cijeli obuhvat</label>
- </div>
- <div id="research-map" class="map-view" role="region" aria-label="Interaktivna mapa planiranog istraživanja područja Botuna"><p class="map-loading">Mapa se učitava. Za prikaz karte potrebna je internet veza.</p></div>
- <div class="map-note"><span class="note-badge">Važno</span><p>Podloga mape je OpenStreetMap. Obojeni krugovi predstavljaju naš <strong>planirani istraživački obuhvat</strong>, a ne NASA snimak niti lokacije arheoloških nalazišta.</p></div>
-</section>
-<section class="section shell"><div class="section-heading"><div><span class="kicker">Tri nivoa pregleda</span><h2>Zašto tri kruga?</h2></div></div><div class="step-grid three">
- <div class="step"><span>01</span><h3>Do 3 kilometra</h3><p>Prvo posmatramo Botun i najbliže okruženje, gdje su detalji najvažniji za našu početnu priču.</p></div>
- <div class="step"><span>02</span><h3>Od 3 do 5 kilometara</h3><p>Uključujemo širi kraj i upoređujemo predio sa javno dokumentovanim istorijskim tragovima.</p></div>
- <div class="step"><span>03</span><h3>Od 5 do 10 kilometara</h3><p>Pratimo širi prostor Zetske ravnice i okolnog reljefa radi razumijevanja veza među predjelima.</p></div>
- </div></section>
-</main>
-<footer class="site-footer">
- <div class="shell footer-inner">
-   <div><strong>Botun — Tragovi prošlosti</strong><p>Istraživanje javno dostupnih podataka o predjelu Botuna i okoline.</p><p class="footer-warning">Sadržaj su izradili AI agenti. Niko od ljudi nije provjerio niti potvrdio rezultate ovog projekta.</p></div>
-   <div class="footer-right"><a href="o-projektu.html#izvori">Izvori podataka</a><a href="metod.html">Ograničenja analize</a><span>Posljednje ažuriranje: 11. novembar 2026.</span></div>
- </div>
-</footer>
-</body>
-</html>
+<header class="site-header"><div class="shell header-inner">
+<a class="brand" href="index.html" aria-label="Botun — početna"><span class="brand-symbol" aria-hidden="true">◎</span><span>BOTUN<small>TRAGOVI IZ PODATAKA</small></span></a>
+<nav class="site-nav" aria-label="Glavna navigacija"><a href="index.html">Početna</a><a href="istrazivanje.html">Istraživanje</a><a href="kap-crveni-mulj.html">KAP</a><a href="kolektor-botun.html">Kolektor</a><a href="o-projektu.html">O projektu</a><a href="mapa.html" aria-current="page">Mapa</a></nav>
+<details class="mobile-navigation"><summary aria-label="Otvori meni za navigaciju"><span aria-hidden="true">☰</span> Meni</summary><nav aria-label="Navigacija za telefon"><a href="index.html">Početna</a><a href="istrazivanje.html">Istraživanje</a><a href="kap-crveni-mulj.html">KAP</a><a href="kolektor-botun.html">Kolektor</a><a href="o-projektu.html">O projektu</a><a href="mapa.html" aria-current="page">Mapa</a></nav></details>
+</div></header>
+<div class="site-notice" role="note" aria-label="Važno obavještenje o porijeklu istraživanja"><div class="shell notice-inner"><span class="notice-dot" aria-hidden="true">!</span><div><strong>AI istraživanje. Bez ljudske provjere.</strong><p>Sajt, tekstove, mape i analize pripremili su isključivo AI agenti na zahtjev Đorđa Vukčevića, iz javno dostupnih izvora. Rezultate nije provjerio niti potvrdio nijedan čovjek — ni Đorđe ni drugi istraživači. Sve je preliminarno; nijedno arheološko otkriće nije potvrđeno.</p></div></div></div>
+<main id="sadrzaj"><section class="page-hero"><div class="shell"><p class="eyebrow">PROSTOR ISTRAŽIVANJA</p><h1>Mapa Botuna i okoline</h1><p class="page-lead">Tri zone daju okvir analize. Krugovi ne znače da smo sve površine detaljno laserski snimili.</p></div></section>
+<section class="section shell map-full-section"><div class="map-toolbar"><div><p class="eyebrow">INTERAKTIVNA MAPA</p><h2>Odaberi zone</h2></div><p>Približan centar Botuna služi kao polazna tačka istraživanja — ne označava arheološko nalazište.</p></div>
+<div class="map-layout"><aside class="map-sidebar"><p class="map-sidebar-title">Istraživački krugovi</p>
+<label class="ring-option"><input type="checkbox" data-ring="3000" checked><span class="ring-swatch ring-3"></span> Do 3 km <small>Najbliža okolina</small></label>
+<label class="ring-option"><input type="checkbox" data-ring="5000" checked><span class="ring-swatch ring-5"></span> Do 5 km <small>Bliži predio</small></label>
+<label class="ring-option"><input type="checkbox" data-ring="10000" checked><span class="ring-swatch ring-10"></span> Do 10 km <small>Širi predio</small></label>
+<p class="map-legend-note">Krugovi označavaju planirani obuhvat, <strong>ne</strong> lokacije novih nalaza, granice KAP-a ili parcele kolektora.</p></aside>
+<div class="map-view"><div id="research-map" role="region" aria-label="Interaktivna mapa istraživačkih zona Botuna"></div><p class="map-attribution-note">Podloga: OpenStreetMap. Prikazane zone služe za orijentaciju, a ne kao geodetska potvrda.</p></div></div>
+</section></main>
+<footer class="site-footer"><div class="shell footer-inner"><div><a href="index.html" class="footer-brand">BOTUN <span>/ Tragovi iz podataka</span></a><p class="footer-warning">Rezultate ovog AI istraživanja nije nezavisno potvrdio nijedan čovjek.</p></div><div class="footer-links"><a href="metod.html">Metod i ograničenja</a><a href="o-projektu.html#izvori">Izvori</a><a href="mapa.html">Mapa</a><small>Posljednja obrada: 11. novembar 2026.</small></div></div></footer>
+</body></html>

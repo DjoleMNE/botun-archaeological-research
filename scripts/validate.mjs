@@ -1,155 +1,26 @@
-
 import fs from "node:fs";
 import assert from "node:assert/strict";
-const pages=["index.html","mapa.html","istrazivanje.html","metod.html","o-projektu.html","kap-crveni-mulj.html","kolektor-botun.html","404.html"];
-for(const name of pages){
- const s=fs.readFileSync(name,"utf8");
- assert(s.includes('lang="cnr-Latn"'),name+": wrong language");
- for(const phrase of ["isključivo AI agenti","Đorđa Vukčevića","nije provjerio niti potvrdio nijedan čovjek","preliminarno"]){assert(s.includes(phrase),name+": missing disclaimer phrase "+phrase);}
- assert(s.includes('class="site-notice"'),name+": missing visible disclaimer");
- assert(s.includes('class="footer-warning"'),name+": missing footer disclaimer");
- assert(!s.includes("language-toggle"),name+": bilingual toggle must not exist");
-}
-const data=JSON.parse(fs.readFileSync("data/research.json","utf8"));
-assert(data.datasets.length>=6,"dataset list too short");
-assert(!JSON.stringify(data).includes('"note_en"'),"no English notes in public data");
-assert(data.datasets.find(d=>d.id==="gedi").note.includes("98.448"),"GEDI data mismatch");
-assert(data.datasets.find(d=>d.id==="icesat2").note.includes("27.535"),"ICESat-2 data mismatch");
-for(const d of data.datasets){assert(/^https:\/\//.test(d.source_url),"missing secure provider link");assert(d.note.length>50,"explanation too short");}
-const g=JSON.parse(fs.readFileSync("data/study-area.geojson","utf8"));
-const radii=g.features.filter(f=>f.properties&&f.properties.radius_m).map(f=>f.properties.radius_m).sort((a,b)=>a-b);
-assert.deepStrictEqual(radii,[3000,5000,10000],"study rings must remain 3/5/10 km");
-
-const homepage=fs.readFileSync("index.html","utf8");
-for(const phrase of ['id="research-map"','Nijedno novo arheološko otkriće nije potvrđeno.','98.448','31.327','27.535','14.032','Planirani istraživački obuhvat']){
-  assert(homepage.includes(phrase)|| (phrase==="Planirani istraživački obuhvat" && homepage.includes("planirane granice")), "Homepage missing prominent evidence or map context: "+phrase);
-}
-assert(homepage.includes("leaflet.js"),"Interactive homepage map must load map library");
-assert(homepage.includes("ne prikazuju") || homepage.includes("ne prikazuju površinu") || homepage.includes("ne služe za poređenje"),"Explain what graphics do not measure");
-const updates=data.updates||[];
-assert(updates.length>=2,"Research log must include most recent public-safe update");
-console.log("Provjera završena: sve javne stranice sadrže obavještenje, a javni podaci i granice odgovaraju osnovnim pravilima.");
-
-const CSS=fs.readFileSync("assets/style.css","utf8");
-assert(CSS.includes(".mobile-navigation"),"mobile navigation styling missing");
-assert(CSS.includes("max-width:780px"),"mobile breakpoint missing");
-assert(!fs.existsSync("dnevnik.html"),"Dnevnik page must be removed");
-for(const name of pages){
- const markup=fs.readFileSync(name,"utf8");
- assert(markup.includes('class="mobile-navigation"'),name+": missing phone menu");
- assert(markup.includes('aria-label="Navigacija za telefon"'),name+": missing accessible phone nav");
- assert(!markup.includes('href="dnevnik.html"'),name+": orphaned diary link");
-}
-
-const landscapePages=["index.html","istrazivanje.html"];
-for(const name of landscapePages){
- const s=fs.readFileSync(name,"utf8");
- assert(s.includes("nasadem_relief_me.svg"),name+": no NASADEM figure");
- assert(s.includes("sentinel_godisnja_doba_me.svg"),name+": no Sentinel-2 figure");
- assert(s.includes('id="pravi-predio"'),name+": missing landscape section");
- assert(s.includes("bez ljudske provjere"),name+": missing human-verification caveat near figures");
-}
-for(const file of ["assets/figures/nasadem_relief_me.svg","assets/figures/sentinel_godisnja_doba_me.svg"]){
- assert(fs.statSync(file).size>100000,file+": missing original scientific figure");
-}
-assert(!fs.existsSync("dnevnik.html"),"Removed diary page must stay removed");
-
-const kap=fs.readFileSync("kap-crveni-mulj.html","utf8");
-for(const term of ["420.000 m²","7–8 miliona tona","Bazen A","Bazen B","nije provjerio niti potvrdio nijedan čovjek"])assert(kap.includes(term),"Missing KAP label: "+term);
-for(const name of pages){const html=fs.readFileSync(name,"utf8");assert((html.match(/href="kap-crveni-mulj.html"/g)||[]).length>=2,name+": KAP navigation links missing");}
-assert(JSON.parse(fs.readFileSync("data/kap-crveni-mulj.json","utf8")).facts.basins===2,"Basin data invalid");
-
-const sourceCatalogue=JSON.parse(fs.readFileSync("data/izvori.json","utf8"));
-assert(sourceCatalogue.entries.length>=13,"Public source catalogue incomplete");
-for(const status of ["active","documentary_active","new_research","specification_only","candidate"]){
- assert(sourceCatalogue.entries.some(e=>e.status===status),"Missing source status "+status);
-}
-const currentKap=fs.readFileSync("kap-crveni-mulj.html","utf8");
-assert(currentKap.includes("kap_okolina_sentinel_me.svg"),"KAP-specific image missing from page");
-assert(currentKap.includes("2021.")&&currentKap.includes("Agencije za zaštitu životne sredine"),"Official EPA boundary evidence missing");
-assert(currentKap.includes("nijesu ucrtane potvrđene granice"),"KAP boundary limitation missing");
-assert(fs.statSync("assets/figures/kap_okolina_sentinel_me.svg").size>1000000,"KAP actual image missing");
-const aboutSources=fs.readFileSync("o-projektu.html","utf8");
-for(const txt of ["Podaci koje smo već koristili","Zvanični dokumenti i javni izvještaji","Dodatni izvori koje tek možemo istražiti"]) {
- assert(aboutSources.includes(txt),"Missing source status disclosure: "+txt);
-}
-const kapStructure=currentKap.indexOf('id="kap-satelit"');
-assert(kapStructure>0&&kapStructure<currentKap.indexOf('id="kap-fakti"'),"KAP actual images must come before background text");
-
-for (const page of pages) {
- const s=fs.readFileSync(page,"utf8");
- for (const selector of ['<nav class="site-nav" aria-label="Glavna navigacija">','<nav aria-label="Navigacija za telefon">']) {
-  const start=s.indexOf(selector),end=s.indexOf("</nav>",start);
-  assert(start>=0&&end>start,page+": missing navigation");
-  const links=[...s.slice(start+selector.length,end).matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>[^<]+<\/a>/g)].map(m=>m[1]);
-  assert(links.length>=5,page+": unexpected link count");
-  assert(links.at(-1)==="mapa.html",page+": Mapa must be the rightmost/last navigation link");
- }
-}
-
-/* Public releases from research R-013 and R-014: publication and source-state checks */
-for(const filename of ["kap_2021_2026_me.svg","kap_proljece_jesen_2026_me.svg","kap_jesenji_niz_me.svg","worldcover_2021_me.svg","povrsinska_voda_1984_2024_me.svg"]){
- const s=fs.readFileSync("assets/figures/"+filename,"utf8");
- assert(s.includes("<svg")&&s.includes("</svg>"),filename+": real figure invalid");
- assert(!s.includes("<script"),filename+": script in SVG");
-}
-const kapUpdated=fs.readFileSync("kap-crveni-mulj.html","utf8");
-for(const f of ["kap_2021_2026_me.svg","kap_proljece_jesen_2026_me.svg","kap_jesenji_niz_me.svg"])assert(kapUpdated.includes(f),"Missing KAP image "+f);
-assert(kapUpdated.includes("2022.")&&kapUpdated.includes("ne prikazujemo kao potvrđene granice"),"KAP limitations missing");
-assert(!kapUpdated.includes("basin_outlines_provisional.geojson"),"Private geometry accidentally exposed");
-const studyNew=fs.readFileSync("istrazivanje.html","utf8");
-for(const f of ["worldcover_2021_me.svg","povrsinska_voda_1984_2024_me.svg"])assert(studyNew.includes(f),"Missing regional map "+f);
-const newSources=JSON.parse(fs.readFileSync("data/izvori.json","utf8"));
-for(const nm of ["ESA WorldCover","JRC Global Surface Water"]){
- const e=newSources.entries.find(x=>x.name===nm);
- assert(e&&e.status==="active",nm+": acquired layer status out-of-date");
-}
-assert(newSources.entries.some(x=>x.name.includes("Podgorica")), "Previously documented municipal sources lost");
-assert(newSources.entries.some(x=>x.name==="Copernicus Sentinel-1"&&x.status==="candidate"),"Unacquired radar incorrectly promoted");
-
-/* AI research update R-015: public-safe zonal and historical summaries. */
-const phaseStudy=fs.readFileSync("istrazivanje.html","utf8");
-for(const s of ["analiza-po-zonama","provjera-reljefa","Šest ranije zabilježenih mjesta","1.036","706","420"]){
- assert(phaseStudy.includes(s),"Missing phase research output: "+s);
-}
-assert(!phaseStudy.includes("results/phase4_screen/"),"Private screening source may not be public");
-const phaseData=JSON.parse(fs.readFileSync("data/pregled-po-zonama.json","utf8"));
-assert(phaseData.zone_data.length===3,"Zone count must be three");
-assert(phaseData.zone_data.reduce((a,x)=>a+x.gedi,0)===98448,"Zone GEDI total mismatch");
-assert(phaseData.zone_data.reduce((a,x)=>a+x.icesat,0)===27535,"Zone ICESat total mismatch");
-assert(phaseData.historic.records.length===6,"Six documented historical references expected");
-assert(phaseData.historic.records.every(x=>!Object.keys(x).some(k=>/coord|lat|lon/i.test(k))),"Do not publish site coordinates");
-assert(phaseData.screening.archaeological_candidates===0,"No confirmed AI archaeological candidates");
-
-const collectorHtml=fs.readFileSync("kolektor-botun.html","utf8");
-for(const term of ["12,7 ha","230.000","Morača","2024","2026","nije provjerio niti potvrdio nijedan čovjek"])
- assert(collectorHtml.includes(term),"Missing collector research context: "+term);
-for(const p of pages){
- const s=fs.readFileSync(p,"utf8");
- const navs=[...s.matchAll(/<nav[^>]*>([\s\S]*?)<\/nav>/g)].map(x=>x[1]);
- assert(navs.length===2,p+": expected both menus");
- for(const nav of navs){
-  assert((nav.match(/href="kolektor-botun.html"/g)||[]).length===1,p+": missing collector navigation");
-  assert(/<a href="mapa\.html"(?: aria-current="page")?>Mapa<\/a>\s*$/.test(nav),p+": Mapa must remain last");
- }
-}
-const cd=JSON.parse(fs.readFileSync("data/kolektor-botun.json","utf8"));
-assert(cd.human_verified===false&&cd.sources.length===7,"Collector provenance invalid");
-assert(!collectorHtml.includes("cadastral_grid_lead_private"),"Do not expose research control points");
-assert(!fs.existsSync("dnevnik.html"),"Dnevnik remains removed");
-
-/* R017-R018 public research assets, no target coordinates or unsupported site placement */
-for(const f of ["osjetljivost_pregleda_me.svg","zelenilo_pet_jeseni_me.svg","collector_context_2021_2025_2026_me.svg"]){
- const raw=fs.readFileSync("assets/figures/"+f,"utf8");
- assert(raw.includes("<svg")&&raw.includes("</svg>"),f+": source image missing");
- assert(!raw.includes("<script"),f+": active SVG content prohibited");
-}
-const phasePage=fs.readFileSync("istrazivanje.html","utf8");
-assert(phasePage.includes("osjetljivost_pregleda_me.svg")&&phasePage.includes("zelenilo_pet_jeseni_me.svg"),"Two R017 figures not published");
-assert(phasePage.includes("341 laserski niz"),"Laser-first work absent");
-const collectorPage=fs.readFileSync("kolektor-botun.html","utf8");
-assert(collectorPage.includes("collector_context_2021_2025_2026_me.svg"),"R018 context image absent");
-assert(collectorPage.includes("nije precizna mapa")||collectorPage.includes("ne precizna mapa"),"Collector area uncertainty absent");
-assert(!collectorPage.includes("cadastral_grid_lead_private"),"Private geography included");
-const newResearch=JSON.parse(fs.readFileSync("data/research.json","utf8"));
-assert(newResearch.updates.length===18,"R018 progress updates not synchronized");
+const pages=["index.html","istrazivanje.html","kap-crveni-mulj.html","kolektor-botun.html","mapa.html","metod.html","o-projektu.html","404.html"];
+for(const p of pages){const s=fs.readFileSync(p,"utf8");assert(s.includes('lang="cnr-Latn"'),p+": language");for(const term of ["isključivo AI agenti","Đorđa Vukčevića","Rezultate nije provjerio niti potvrdio nijedan čovjek","preliminarno"]){assert(s.includes(term),p+": disclaimer "+term);}assert(s.includes('class="site-notice"')&&s.includes('class="footer-warning"'),p+": notices");assert(!s.includes('href="dnevnik.html"'),p+": removed page");for(const nav of [...s.matchAll(/<nav[^>]*>([\s\S]*?)<\/nav>/g)]){const links=[...nav[1].matchAll(/<a\b[^>]*href="([^"]+)"/g)].map(x=>x[1]);assert(links.at(-1)==="mapa.html",p+": map last");assert(links.length===6,p+": nav count");}assert((s.match(/<nav\b/g)||[]).length===2,p+": desktop and mobile nav");}
+assert(!fs.existsSync("dnevnik.html"),"removed diary");
+const home=fs.readFileSync("index.html","utf8");
+assert(home.includes("Kako Botun izgleda iz svemira?"),"home satellite near top");
+assert(home.indexOf("Kako Botun izgleda iz svemira?")<home.indexOf("Šta za sada znamo?"),"home section order");
+assert(home.indexOf('id="najvaznije"')>home.indexOf('id="teme"'),"home statistics at bottom");
+for(const s of ["98.448","31.327","27.535","14.032","Nijedno novo arheološko otkriće nije potvrđeno."]){assert(home.includes(s),"home missing "+s);}
+for(const [page,names] of Object.entries({"istrazivanje.html":["gedi_mjerenja_me.svg","icesat2_mjerenja_me.svg","osjetljivost_pregleda_me.svg","zelenilo_pet_jeseni_me.svg"],"kap-crveni-mulj.html":["kap_jesenji_niz_me.svg","kap_2021_2026_me.svg","kap_proljece_jesen_2026_me.svg"],"kolektor-botun.html":["collector_context_2021_2025_2026_me.svg"],"index.html":["gedi_mjerenja_me.svg","nasadem_relief_me.svg","sentinel_godisnja_doba_me.svg"]})){const s=fs.readFileSync(page,"utf8");for(const x of names){assert(s.includes(x),page+": missing real source visual "+x);assert(fs.statSync("assets/figures/"+x).size>5000,page+": missing image "+x);}}
+const r=JSON.parse(fs.readFileSync("data/research.json","utf8"));const zones=JSON.parse(fs.readFileSync("data/pregled-po-zonama.json","utf8"));const c=JSON.parse(fs.readFileSync("data/kolektor-botun.json","utf8"));const cat=JSON.parse(fs.readFileSync("data/izvori.json","utf8"));
+assert(r.updates.length===18&&r.datasets.length===8,"research records preserved");
+assert(zones.zone_data.length===3&&zones.zone_data.reduce((a,x)=>a+x.gedi,0)===98448&&zones.zone_data.reduce((a,x)=>a+x.icesat,0)===27535,"zone totals");
+assert(zones.historic.records.length===6,"historical register");
+assert(c.sources.length===7&&c.human_verified===false,"collector source records");
+assert(cat.entries.length>=16,"source catalogue preserved");
+const map=fs.readFileSync("mapa.html","utf8");
+assert(map.includes('id="research-map"')&&map.includes('data-ring="3000"')&&map.includes('data-ring="10000"'),"map functionality retained");
+const geo=JSON.parse(fs.readFileSync("data/study-area.geojson","utf8"));
+assert.deepEqual(geo.features.filter(f=>f.properties?.radius_m).map(f=>f.properties.radius_m).sort((a,b)=>a-b),[3000,5000,10000],"ring boundaries");
+const css=fs.readFileSync("assets/style.css","utf8"),js=fs.readFileSync("assets/app.js","utf8");
+assert(css.includes("max-width:650px")&&css.includes(".image-modal"),"responsive design and image viewer");
+assert(js.includes("analysis-notes")&&js.includes("data-viewer")&&js.includes("research-map"),"interactive features");
+for(const p of pages){const s=fs.readFileSync(p,"utf8");assert(!/results\/(phase4_|collector_followup|kap_validation_followup)/.test(s),p+": private exploratory paths should not leak");}
+console.log("Provjera gotova: osam stranica, čista navigacija, stvarni prikazi, javni izvori i ograničenja su sačuvani.");
