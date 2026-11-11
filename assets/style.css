@@ -47,3 +47,34 @@
 .evidence-provenance{color:#60716a;font-size:.78rem;margin:18px 0 0;max-width:900px}
 @media(max-width:1000px){.hero-live-map{max-width:710px;margin:auto;width:100%}.home-map{height:330px}}
 @media(max-width:700px){.home-map{height:290px}.hero-live-map figcaption{padding:12px 15px}.archaeology-status{grid-template-columns:38px 1fr;gap:14px;padding:20px 18px}.archaeology-icon{height:38px;width:38px;font-size:1.3rem}.archaeology-status h3{font-size:1.3rem}.archaeology-status a{grid-column:2;text-align:left}.evidence-gallery{grid-template-columns:1fr}.evidence-visual{min-height:290px}.visual-next{display:block;padding:19px}.visual-next .button{margin-top:17px}}
+
+
+/* Measured evidence cards and plain-language results */
+.evidence-section{padding-top:62px}.direct-answer{display:flex;align-items:flex-start;gap:16px;background:#e5f3e5;border-left:5px solid #33704b;border-radius:10px;padding:18px 21px;margin:10px 0 24px}
+.direct-answer p{margin:0;font-size:1.05rem}.direct-symbol{font-size:1.45rem;color:#246744;font-weight:900;line-height:1.2}
+.evidence-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;align-items:stretch;margin-bottom:20px}
+.evidence-figure{min-width:0;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:0;box-shadow:0 14px 38px #19312a0c;display:flex;flex-direction:column}
+.evidence-figure .figure-link{background:#f1f6f4;display:flex;align-items:center;justify-content:center;min-height:250px;padding:9px}
+.evidence-figure .figure-link img{width:100%;height:auto;max-height:400px;object-fit:contain;display:block}
+.evidence-figure figcaption{padding:20px 23px 25px;display:flex;flex-direction:column;flex:1}
+.evidence-figure figcaption h3{font-size:1.34rem;margin:.35em 0 .4em}
+.evidence-figure figcaption>p{font-size:.93rem;line-height:1.6;color:#415651}
+.evidence-kind{font-size:.76rem;color:#376a59;text-transform:uppercase;letter-spacing:.08em;font-weight:850}
+.evidence-figure .figure-source{font-size:.8rem;margin-top:auto;color:#687770}
+.evidence-figure .figure-open{display:inline-block;font-size:.88rem;font-weight:800;margin-top:10px}
+.gallery-explainer{font-size:.87rem;line-height:1.65;color:var(--muted);max-width:1000px}
+.more-link-row{padding-top:13px}.more-link-row .button{background:var(--forest);color:white}.more-link-row .button:hover{background:var(--forest-deep)}
+.example-visual{margin:10px 0 20px;border:1px solid #cddbd1;border-radius:14px;overflow:hidden;background:#fff}
+.example-visual img{width:100%;height:auto;display:block}
+.example-visual figcaption{padding:13px 22px;background:#fffaf1;font-size:.9rem;color:#554937;border-top:1px solid #e1d8bd}
+.finding-empty{display:flex;align-items:flex-start;gap:16px;background:#fff4dc;border-left:5px solid #c39236;padding:18px 22px;border-radius:10px;max-width:1000px}
+.finding-empty>span{width:33px;height:33px;flex:0 0 33px;display:grid;place-items:center;color:white;background:#b98330;border-radius:50%;font-weight:900}
+.finding-empty p{margin:0;line-height:1.67}
+.verdict-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}
+.verdict-card{border-radius:12px;border:1px solid var(--line);padding:23px 25px;background:#f7faf8;border-top:5px solid #5a8e72}
+.verdict-card.careful{border-top-color:#c58d3f;background:#fdf9f3}.verdict-card.next{border-top-color:#5885a8;background:#f4f8fb}
+.verdict-card>span{font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;color:#637973;font-weight:850}
+.verdict-card h3{font-size:1.3rem;margin:.5em 0 .65em}
+.verdict-card p{font-size:.94rem;color:var(--muted);margin-bottom:0}
+@media(max-width:850px){.evidence-gallery,.verdict-grid{grid-template-columns:1fr}.evidence-figure .figure-link img{max-height:none}}
+@media(max-width:520px){.evidence-figure figcaption{padding:15px 17px 20px}.evidence-figure .figure-link{min-height:unset}.example-visual figcaption{padding:11px 14px;font-size:.84rem}.direct-answer,.finding-empty{padding:14px 15px}}
