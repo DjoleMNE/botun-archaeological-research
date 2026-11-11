@@ -88,7 +88,6 @@ for (const page of pages) {
 }
 
 /* Public releases from research R-013 and R-014: publication and source-state checks */
-const timelineSvg="assets/figures/kap_jesenji_niz_me.svg";
 for(const filename of ["kap_2021_2026_me.svg","kap_proljece_jesen_2026_me.svg","kap_jesenji_niz_me.svg","worldcover_2021_me.svg","povrsinska_voda_1984_2024_me.svg"]){
  const s=fs.readFileSync("assets/figures/"+filename,"utf8");
  assert(s.includes("<svg")&&s.includes("</svg>"),filename+": real figure invalid");
@@ -96,7 +95,7 @@ for(const filename of ["kap_2021_2026_me.svg","kap_proljece_jesen_2026_me.svg","
 }
 const kapUpdated=fs.readFileSync("kap-crveni-mulj.html","utf8");
 for(const f of ["kap_2021_2026_me.svg","kap_proljece_jesen_2026_me.svg","kap_jesenji_niz_me.svg"])assert(kapUpdated.includes(f),"Missing KAP image "+f);
-assert(kapUpdated.includes("2022.")&&kapUpdated.includes("nijesu ucrtane")===false?kapUpdated.includes("ne prikazujemo kao potvrđene granice"):true,"KAP limitations missing");
+assert(kapUpdated.includes("2022.")&&kapUpdated.includes("ne prikazujemo kao potvrđene granice"),"KAP limitations missing");
 assert(!kapUpdated.includes("basin_outlines_provisional.geojson"),"Private geometry accidentally exposed");
 const studyNew=fs.readFileSync("istrazivanje.html","utf8");
 for(const f of ["worldcover_2021_me.svg","povrsinska_voda_1984_2024_me.svg"])assert(studyNew.includes(f),"Missing regional map "+f);
