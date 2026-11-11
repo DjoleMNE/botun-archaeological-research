@@ -385,3 +385,26 @@
  .source-group{padding:18px}
  .source-group .source-list li{font-size:1rem}
 }
+
+
+/* Research handoff R-013 / R-014: close KAP time series and regional public-safe layers */
+.kap-deep-section{padding-top:64px;padding-bottom:70px}
+.kap-deep-heading>p{max-width:470px}
+.kap-timeline-figure,.kap-compare-card,.regional-card{margin:0;min-width:0;background:#fff;border:1px solid #d3e0d4;border-radius:13px;overflow:hidden;box-shadow:0 6px 23px rgba(20,60,40,.07)}
+.kap-timeline-figure>a,.kap-compare-card>a,.regional-card>a{display:block;width:100%;background:#e8f0e9;border-bottom:1px solid #d6e2d8}
+.kap-timeline-figure img,.kap-compare-card img,.regional-card img{display:block;width:100%;height:auto;max-height:none}
+.kap-timeline-figure figcaption,.kap-compare-card figcaption,.regional-card figcaption{padding:20px 23px 25px}
+.kap-timeline-figure figcaption h3,.kap-compare-card h3,.regional-card h3{font-size:1.32rem;line-height:1.25;margin:10px 0}
+.kap-timeline-figure p,.kap-compare-card p,.regional-card p{font-size:.97rem;line-height:1.7;color:#4f6457}
+.kap-cite,.regional-source{font-size:.85rem!important;color:#617467!important}
+.kap-compare-grid,.regional-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:23px}
+.kap-compare-grid>.kap-compare-card,.regional-grid>.regional-card{display:flex;flex-direction:column}
+.kap-compare-card figcaption,.regional-card figcaption{display:flex;flex-direction:column;flex:1;align-items:flex-start}
+.kap-compare-card figcaption .kap-figure-button,.regional-card figcaption .kap-figure-button{margin-top:auto}
+.kap-compare-disclaimer,.regional-limits{font-size:.94rem;line-height:1.7;padding:18px 20px;background:#fff7e8;border-left:4px solid #bd9758;border-radius:7px;margin-top:22px}
+.kap-image-provenance{font-size:.88rem;line-height:1.65;padding-top:0;padding-bottom:18px;color:#53675d}
+.regional-section{padding-top:65px;padding-bottom:75px}
+.regional-heading>p{max-width:475px}
+.regional-card .kap-figure-button{font-size:.91rem}
+@media(max-width:920px){.kap-compare-grid,.regional-grid{grid-template-columns:minmax(0,1fr);gap:20px}.regional-heading>p,.kap-deep-heading>p{max-width:none}}
+@media(max-width:780px){.kap-deep-section,.regional-section{padding-top:43px;padding-bottom:48px}.kap-timeline-figure figcaption,.kap-compare-card figcaption,.regional-card figcaption{padding:17px 18px 21px}.kap-timeline-figure h3,.kap-compare-card h3,.regional-card h3{font-size:1.25rem}.kap-timeline-figure p,.kap-compare-card p,.regional-card p{font-size:1rem}.kap-compare-disclaimer,.regional-limits{padding:15px 16px;font-size:1rem}.kap-compare-card .kap-figure-button,.regional-card .kap-figure-button{width:100%}}

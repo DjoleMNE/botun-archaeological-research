@@ -51,12 +51,6 @@
       "url": "https://smatsa.rs/upload/vfraip/published/pdf/gen/VFR_LY_GEN_3_1_en.pdf"
     },
     {
-      "name": "Podgorica — opštinski planski inventar lokaliteta",
-      "status": "documentary_active",
-      "description_me": "Javno navedena istorijska i arheološka mjesta u okolini; ovo nije potvrda njihove starosti ni granica.",
-      "url": "https://skupstina.podgorica.me/wp-content/uploads/2025/11/Tekstualni-dio.pdf"
-    },
-    {
       "name": "EPA Crne Gore — elaborat o bazenima",
       "status": "new_research",
       "description_me": "Pronađen je dokument sa geodetskim crtežom oba bazena. Usklađivanje sa satelitskom kartom još nije završeno.",
@@ -64,14 +58,14 @@
     },
     {
       "name": "ESA WorldCover",
-      "status": "candidate",
-      "description_me": "Može pomoći u prikazu šuma, njiva i izgrađenih površina. Još nije obrađen za ovaj sajt.",
+      "status": "active",
+      "description_me": "Preuzeta i prikazana računarska karta pokrivača zemljišta iz 2021. godine za područje Botuna.",
       "url": "https://esa-worldcover.org/en/data-access"
     },
     {
       "name": "JRC Global Surface Water",
-      "status": "candidate",
-      "description_me": "Može prikazati istoriju površinskih voda. Ne pokazuje hemijski sastav vode. Još nije obrađen za ovaj sajt.",
+      "status": "active",
+      "description_me": "Preuzeti i prikazani podaci o učestalosti površinske vode 1984–2024. Ne prikazuju podzemnu vodu ni zagađenje.",
       "url": "https://global-surface-water.appspot.com/download"
     },
     {
@@ -79,6 +73,12 @@
       "status": "candidate",
       "description_me": "Radarski snimci mogu dopuniti pregled predjela kada ima oblaka. Još nijesu obrađeni za ovaj sajt.",
       "url": "https://dataspace.copernicus.eu/explore-data/data-collections/sentinel-data/sentinel-1"
+    },
+    {
+      "name": "Podgorica — opštinski planski inventar lokaliteta",
+      "status": "documentary_active",
+      "description_me": "Javno navedena istorijska i arheološka mjesta u okolini; ovo nije potvrda njihove starosti ni granica.",
+      "url": "https://skupstina.podgorica.me/wp-content/uploads/2025/11/Tekstualni-dio.pdf"
     }
   ]
 }
