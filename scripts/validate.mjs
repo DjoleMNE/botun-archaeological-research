@@ -1,7 +1,7 @@
 
 import fs from "node:fs";
 import assert from "node:assert/strict";
-const pages=["index.html","mapa.html","istrazivanje.html","metod.html","o-projektu.html","kap-crveni-mulj.html","404.html"];
+const pages=["index.html","mapa.html","istrazivanje.html","metod.html","o-projektu.html","kap-crveni-mulj.html","kolektor-botun.html","404.html"];
 for(const name of pages){
  const s=fs.readFileSync(name,"utf8");
  assert(s.includes('lang="cnr-Latn"'),name+": wrong language");
@@ -120,3 +120,20 @@ assert(phaseData.zone_data.reduce((a,x)=>a+x.icesat,0)===27535,"Zone ICESat tota
 assert(phaseData.historic.records.length===6,"Six documented historical references expected");
 assert(phaseData.historic.records.every(x=>!Object.keys(x).some(k=>/coord|lat|lon/i.test(k))),"Do not publish site coordinates");
 assert(phaseData.screening.archaeological_candidates===0,"No confirmed AI archaeological candidates");
+
+const collectorHtml=fs.readFileSync("kolektor-botun.html","utf8");
+for(const term of ["12,7 ha","230.000","Morača","2024","2026","nije provjerio niti potvrdio nijedan čovjek"])
+ assert(collectorHtml.includes(term),"Missing collector research context: "+term);
+for(const p of pages){
+ const s=fs.readFileSync(p,"utf8");
+ const navs=[...s.matchAll(/<nav[^>]*>([\s\S]*?)<\/nav>/g)].map(x=>x[1]);
+ assert(navs.length===2,p+": expected both menus");
+ for(const nav of navs){
+  assert((nav.match(/href="kolektor-botun.html"/g)||[]).length===1,p+": missing collector navigation");
+  assert(/<a href="mapa\.html"(?: aria-current="page")?>Mapa<\/a>\s*$/.test(nav),p+": Mapa must remain last");
+ }
+}
+const cd=JSON.parse(fs.readFileSync("data/kolektor-botun.json","utf8"));
+assert(cd.human_verified===false&&cd.sources.length===4,"Collector provenance invalid");
+assert(!collectorHtml.includes("cadastral_grid_lead_private"),"Do not expose research control points");
+assert(!fs.existsSync("dnevnik.html"),"Dnevnik remains removed");

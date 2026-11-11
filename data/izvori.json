@@ -79,6 +79,18 @@
       "status": "documentary_active",
       "description_me": "Javno navedena istorijska i arheološka mjesta u okolini; ovo nije potvrda njihove starosti ni granica.",
       "url": "https://skupstina.podgorica.me/wp-content/uploads/2025/11/Tekstualni-dio.pdf"
+    },
+    {
+      "name": "Glavni grad — elaborat PPOV Botun",
+      "status": "documentary_active",
+      "description_me": "Projektovana lokacija, kapacitet, procesi i planirani ispust. Nije dokaz puštanja u rad.",
+      "url": "https://sekretarijat-za-plurzs.podgorica.me/wp-content/uploads/2024/11/SPOV-ELABORAT-PROCJENE-UTICAJA-NA-ZIVOTNU-SREDINU.pdf"
+    },
+    {
+      "name": "Glavni grad — saopštenje o radovima PPOV",
+      "status": "documentary_active",
+      "description_me": "Izjave o napretku određenih građevinskih dijelova 2026, ne ukupnoj završenosti ili radu.",
+      "url": "https://podgorica.me/mujovic-i-culafic-obisli-radove-na-postrojenju-za-preciscavanje-otpadnih-voda-u-botunu-zadovoljni-smo-dinamikom-do-60-gradevinskih-radova-zavrseno-na-pojedinim-djelovima-postrojenja/"
     }
   ]
 }

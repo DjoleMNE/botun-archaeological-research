@@ -455,3 +455,65 @@
 .historic-six article p{font-size:.94rem;line-height:1.65}
 @media(max-width:980px){.zone-grid,.historic-six{grid-template-columns:repeat(2,minmax(0,1fr))}.screen-grid{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:700px){.zone-section,.screen-section{padding-top:45px;padding-bottom:49px}.zone-grid,.historic-six{grid-template-columns:minmax(0,1fr);gap:14px}.zone-card,.screen-method,.screen-reviewed{padding:19px}.zone-vegetation{padding:18px}.zone-disclaimer,.screen-warning{padding:15px 17px}.screen-result{padding:17px;gap:10px}.screen-row>div:first-child{flex-wrap:wrap;gap:4px}.zone-card p,.historic-six article p{font-size:1rem}}
+
+
+/* Responsive wastewater collector documentary page (no invented map/imagery). */
+.collector-hero{padding:58px 0 63px;color:#f3fbf7;background:linear-gradient(125deg,#143c36,#255b68)}
+.collector-hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.8fr);align-items:center;gap:43px}
+.collector-hero .kicker{color:#d6e8ba}
+.collector-hero h1{font-size:clamp(2.4rem,4.9vw,4.65rem);line-height:1.13;color:#fff}
+.collector-hero h1 em{color:#d6efad}
+.collector-lead{font-size:1.14rem;line-height:1.7;color:#e7f3eb}
+.collector-honesty{font-size:1.03rem;line-height:1.7;border-left:4px solid #d2e6aa;border-radius:8px;background:#ffffff13;padding:17px 20px;margin:23px 0}
+.collector-actions{display:flex;flex-wrap:wrap;gap:12px}
+.collector-facts{border:1px solid #c8dcd0;background:#f7fbf6;color:#1d4234;padding:25px 27px;border-radius:13px;min-width:0}
+.collector-facts>span{font-size:.81rem;font-weight:850;color:#3e755d;letter-spacing:.04em}
+.collector-facts>div{padding:16px 0;border-bottom:1px solid #dce9df}
+.collector-facts strong{display:block;font-size:clamp(1.9rem,3vw,2.8rem);line-height:1.2}
+.collector-facts small{display:block;color:#546b5d;font-size:.94rem;line-height:1.55;margin-top:5px}
+.collector-facts>a{display:inline-block;font-size:.9rem;font-weight:800;margin-top:18px}
+.collector-leadin{font-size:1.06rem;line-height:1.7;color:#4a6655;max-width:980px}
+.collector-components{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:19px;margin:25px 0}
+.collector-components article,.collector-claims article,.collector-sources article,.collector-geo>div{min-width:0;background:#fff;border:1px solid #cbded3;border-radius:12px;padding:23px}
+.collector-components article{border-top:4px solid #638d77;background:#f6faf7}
+.collector-components article>span{color:#347457;font-size:.8rem;font-weight:850}
+.collector-components h3,.collector-claims h3,.collector-sources h3{font-size:1.25rem;line-height:1.35}
+.collector-components p,.collector-claims p,.collector-sources p,.collector-geo p{font-size:1rem;line-height:1.7;color:#4d6456}
+.collector-caution{border-left:4px solid #bd9855;border-radius:9px;background:#fff7e9;padding:18px 21px;font-size:1rem;line-height:1.7}
+.collector-muted{background:#f0f5f2}
+.collector-claims,.collector-sources,.collector-geo{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px}
+.collector-claims article{border-top:4px solid #5b8e75}
+.collector-claims .collector-unverified{border-top-color:#bf9858;background:#fffaf1}
+.collector-claims a,.collector-sources a,.collector-geo a{font-weight:750}
+.collector-tag{display:inline-block;font-size:.77rem;font-weight:800;color:#2f6d51;background:#e3efe6;border-radius:99px;padding:5px 10px}
+.collector-timeline{padding:0;margin:26px 0;list-style:none}
+.collector-timeline li{display:grid;grid-template-columns:170px minmax(0,1fr);gap:21px;border-left:4px solid #75a086;border-radius:8px;background:#f4f9f5;padding:19px 22px;margin-bottom:13px}
+.collector-timeline time{font-size:1rem;font-weight:850;color:#2d674f}
+.collector-timeline h3{font-size:1.2rem;margin:0 0 9px}
+.collector-timeline p{font-size:1rem;line-height:1.7;color:#50675c}
+.collector-timeline a{font-size:.95rem;font-weight:800}
+.collector-geo{margin:23px 0}
+.collector-geo-icon{display:inline-grid;place-items:center;background:#e2efe4;color:#286c4b;border-radius:100%;height:45px;width:45px;font-size:1.8rem}
+.collector-home-teaser,.collector-crosslink{background:#eaf2ed;border:1px solid #cfdfd3;border-radius:12px;padding-top:25px;padding-bottom:25px;margin-top:23px;margin-bottom:18px}
+.collector-home-teaser{display:flex;align-items:center;justify-content:space-between;gap:23px}
+.collector-home-teaser>div{max-width:800px}
+.collector-home-teaser h2{font-size:1.7rem}
+.collector-home-teaser p,.collector-crosslink p{color:#4d6458;font-size:1rem;line-height:1.7}
+.collector-home-teaser .button{white-space:nowrap;background:#275a47;color:#fff}
+.collector-crosslink h2{font-size:1.4rem}
+@media(max-width:1100px){.collector-hero-grid{grid-template-columns:minmax(0,1fr)}.collector-facts{max-width:710px}}
+@media(max-width:960px){.collector-components{grid-template-columns:minmax(0,1fr)}.collector-claims,.collector-sources,.collector-geo{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:700px){.collector-hero{padding:41px 0 45px}.collector-hero h1{font-size:clamp(2.2rem,8vw,3.1rem)}.collector-actions{flex-direction:column}.collector-actions .button{width:100%}.collector-facts{padding:20px}.collector-components article,.collector-claims article,.collector-sources article,.collector-geo>div{padding:19px}.collector-timeline li{display:block;padding:17px}.collector-timeline time{display:block;margin-bottom:9px}.collector-home-teaser{display:block;padding-top:21px;padding-bottom:22px}.collector-home-teaser .button{display:flex;width:100%;white-space:normal;margin-top:15px}}
+/* Seven links: switch to tap-friendly menu on medium-size screens. */
+@media(min-width:1151px){.site-nav{gap:8px}.site-nav a{padding:9px 3px;font-size:.82rem}}
+@media(min-width:781px) and (max-width:1150px){
+ .site-header{z-index:1200}
+ .site-header .header-inner{display:flex;align-items:center;justify-content:space-between;gap:13px;min-height:74px;padding-top:12px;padding-bottom:12px}
+ .site-header .site-nav{display:none}
+ .mobile-navigation{display:block;position:relative;flex-shrink:0}
+ .mobile-navigation summary{display:flex;align-items:center;justify-content:center;gap:9px;min-width:97px;min-height:48px;padding:10px 14px;background:#244d42;border:1px solid #a5c3ad;border-radius:10px;color:white;font-weight:750;cursor:pointer;list-style:none}
+ .mobile-navigation summary::-webkit-details-marker{display:none}
+ .mobile-navigation nav{position:absolute;right:0;top:calc(100% + 10px);z-index:1400;width:min(350px,calc(100vw - 32px));max-height:min(74vh,560px);overflow:auto;padding:9px;border:1px solid #82a893;border-radius:12px;background:#123c33;box-shadow:0 20px 40px #0006}
+ .mobile-navigation nav a{display:flex;align-items:center;min-height:50px;padding:12px 15px;text-decoration:none;color:#f0f7ed;font-size:1rem;line-height:1.35;font-weight:700;border-radius:7px}
+ .mobile-navigation nav a[aria-current="page"]{background:#e2efcb;color:#18392b}
+}

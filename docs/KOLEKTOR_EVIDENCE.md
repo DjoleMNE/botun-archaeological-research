@@ -1,0 +1,7 @@
+# Kolektor/PPOV Botun — evidence ledger (AI only, unverified by humans)
+Research R-017, source `public-export/collector/brief_me.json`, snapshot `53272414b1c754e8e93528b08a8b68dc5e440ea5`.
+EIA: https://sekretarijat-za-plurzs.podgorica.me/wp-content/uploads/2024/11/SPOV-ELABORAT-PROCJENE-UTICAJA-NA-ZIVOTNU-SREDINU.pdf. Cover September 2024, PDF physical page70 (planned 12.7 ha), 89 (planned Morača recipient), 90–92 (components), 91 (design load about 230,000 population equivalents for 2045).
+Municipal 2 Oct 2026: https://podgorica.me/mujovic-i-culafic-obisli-radove-na-postrojenju-za-preciscavanje-otpadnih-voda-u-botunu-zadovoljni-smo-dinamikom-do-60-gradevinskih-radova-zavrseno-na-pojedinim-djelovima-postrojenja/. Component-specific progress range 30–60% (attributed statements, not overall commissioning).
+RTCG 14 Jan 2026: https://rtcg.me/vijesti/drustvo/800110/botun-na-gradilistu-predvidjenom-za-kolektor-aktivan-jedan-bager-lokaciju-obezbjedjuje-policija.html. Dated site report and resident objections.
+Permit promoter page: https://ovpg.me/news-single/93. Signed permit, precise date/year and conditions still need primary confirmation.
+Never invent geography or site coordinates from private grid intersection leads; source CRS and independent validation remain unresolved. Do not re-publish source maps/photos without reuse checks. No confirmed actual discharge, operation, water chemistry, health, impacts or compliance. Separate network, plant and sludge treatment from KAP red mud. No emails or institutional contact authorised.

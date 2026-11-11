@@ -1,0 +1,79 @@
+{
+  "updated_at": "2026-11-11",
+  "human_verified": false,
+  "status": "documentary_brief_ready_for_website_review",
+  "title_me": "Kolektor i postrojenje za otpadne vode u Botunu",
+  "intro_me": "Počeli smo zaseban pregled javne dokumentacije o otpadnim vodama. Razlikujemo ono što projekat predviđa, ono što izvori prijavljuju o radovima i ono što tek treba provjeriti.",
+  "components_me": [
+    {
+      "name_me": "Kolektorska mreža",
+      "description_me": "Cijevi koje dovode otpadnu vodu. Mreža i samo postrojenje nijesu ista stvar."
+    },
+    {
+      "name_me": "Prečišćavanje vode",
+      "description_me": "Projektom je predviđen tretman otpadne vode. Opis projekta sam po sebi ne potvrđuje da postrojenje radi ili ostvaruje predviđene rezultate."
+    },
+    {
+      "name_me": "Obrada mulja",
+      "description_me": "Dokumentacija posebno opisuje obradu i spaljivanje mulja iz procesa prečišćavanja. To nije crveni mulj iz proizvodnje aluminijuma."
+    }
+  ],
+  "design_me": "Elaborat iz septembra 2024. opisuje lokaciju od 12,7 hektara i projektovano opterećenje od približno 230.000 ekvivalentnih stanovnika za 2045. To je način izražavanja količine zagađujućih materija za koju se sistem projektuje, a ne broj trenutno priključenih ljudi. Morača je navedena kao planirani prijemnik prečišćene vode; ovim pregledom nijesmo potvrdili stvarno ispuštanje ni kvalitet vode.",
+  "design_source_pdf_pages": [
+    70,
+    89,
+    91
+  ],
+  "timeline": [
+    {
+      "date": "2024-09",
+      "title_me": "Elaborat opisuje projekat",
+      "description_me": "Datum na naslovnoj strani dokumenta. Navodi planirane cjeline, lokaciju i kapacitet; nije dokaz puštanja u rad.",
+      "source_id": "eia"
+    },
+    {
+      "date": "2026-01-14",
+      "title_me": "Medijski izvještaj sa gradilišta",
+      "description_me": "RTCG/MediaBiro izvještava o aktivnosti bagera i protivljenju mještana. To je datirani izvještaj, a ne naše satelitsko mjerenje.",
+      "source_id": "rtcg"
+    },
+    {
+      "date": "2026-10-02",
+      "title_me": "Opština izvještava o napredovanju radova",
+      "description_me": "Objavljene izjave navode različit stepen završenosti pojedinih djelova. Iz njih se ne može izvesti jedinstven procenat završenosti cijelog projekta niti potvrda rada postrojenja.",
+      "source_id": "municipality"
+    }
+  ],
+  "limitations_me": [
+    "Različiti dokumenti navode različite planirane rokove. Nijedan od njih sam ne potvrđuje datum puštanja u rad.",
+    "Pronađena je objava o građevinskoj dozvoli; potpisani dokument, datum i puni uslovi još nijesu pribavljeni.",
+    "Geografsko postavljanje objavljenih planova još se provjerava. Nijesmo objavili pretpostavljenu granicu projekta.",
+    "Satelitsko poređenje posebno za gradilište još nije završeno.",
+    "Ovaj pregled ne utvrđuje uticaj na zdravlje, podzemnu vodu ili zagađenje. Stavove i najave treba razlikovati od nezavisnih mjerenja."
+  ],
+  "sources": [
+    {
+      "id": "eia",
+      "name_me": "Elaborat procjene uticaja, septembar 2024.",
+      "url": "https://sekretarijat-za-plurzs.podgorica.me/wp-content/uploads/2024/11/SPOV-ELABORAT-PROCJENE-UTICAJA-NA-ZIVOTNU-SREDINU.pdf"
+    },
+    {
+      "id": "municipality",
+      "name_me": "Glavni grad, 2. oktobar 2026.",
+      "url": "https://podgorica.me/mujovic-i-culafic-obisli-radove-na-postrojenju-za-preciscavanje-otpadnih-voda-u-botunu-zadovoljni-smo-dinamikom-do-60-gradevinskih-radova-zavrseno-na-pojedinim-djelovima-postrojenja/"
+    },
+    {
+      "id": "rtcg",
+      "name_me": "RTCG/MediaBiro, 14. januar 2026.",
+      "url": "https://rtcg.me/vijesti/drustvo/800110/botun-na-gradilistu-predvidjenom-za-kolektor-aktivan-jedan-bager-lokaciju-obezbjedjuje-policija.html"
+    },
+    {
+      "id": "permit",
+      "name_me": "Objava projektnog društva o dozvoli; datum nije potvrđen",
+      "url": "https://ovpg.me/news-single/93"
+    }
+  ],
+  "disclaimer_me": "Rad su izradili isključivo AI agenti na zahtjev Đorđa, koristeći javno dostupne izvore NASA-e i drugih organizacija. Rezultate izvještaja i analiza nije provjerio niti potvrdio nijedan čovjek, uključujući Đorđa.",
+  "source_research_snapshot": "53272414b1c754e8e93528b08a8b68dc5e440ea5",
+  "publication_note_me": "Javni dokumentarni pregled, bez potvrđenog gradilišnog poligona, stvarne emisije ili puštanja u rad."
+}
