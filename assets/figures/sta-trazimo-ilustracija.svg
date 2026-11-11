@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+<title id="title">Koje oblike tek želimo da provjerimo?</title>
+<desc id="desc">Tri stilizovana primjera: uzvišenje, linija nalik zidu i staza. Ovo nijesu konkretni nalazi u Botunu.</desc>
+<rect width="1200" height="500" fill="#f4f7f2"/>
+<text x="48" y="51" font-size="29" font-weight="750" font-family="Arial,sans-serif" fill="#173e33">Primjeri mogućih tragova</text>
+<text x="48" y="85" font-size="17" font-family="Arial,sans-serif" fill="#4b6558">ILUSTRACIJA — ovo nijesu nalazi iz Botuna</text>
+<g font-family="Arial,sans-serif">
+<g transform="translate(40 114)">
+<rect width="355" height="304" rx="16" fill="#fff" stroke="#d1dfd3" stroke-width="2"/>
+<rect x="18" y="20" width="319" height="181" rx="10" fill="#e8eee1"/>
+<path d="M30 170 H326" stroke="#67846e" stroke-width="4"/>
+<path d="M80 171 Q110 163 128 115 Q177 40 224 112 Q249 167 280 171" fill="#c2b58c" stroke="#9c8f6c" stroke-width="4"/>
+<g fill="#a19873"><circle cx="134" cy="142" r="5"/><circle cx="156" cy="108" r="4"/><circle cx="184" cy="92" r="3"/><circle cx="211" cy="134" r="6"/><circle cx="171" cy="150" r="4"/></g>
+<text x="25" y="236" font-size="24" font-weight="700" fill="#1b4537">Uzvišenje</text>
+<text x="25" y="263" font-size="16" fill="#556b5d">Možda stara humka?</text>
+<text x="25" y="285" font-size="14" fill="#a26733">Možda prirodni brežuljak.</text>
+</g>
+<g transform="translate(423 114)">
+<rect width="355" height="304" rx="16" fill="#fff" stroke="#d1dfd3" stroke-width="2"/>
+<rect x="18" y="20" width="319" height="181" rx="10" fill="#e8eee1"/>
+<path d="M28 165 Q80 152 142 165 T327 162" stroke="#799579" stroke-width="4" fill="none"/>
+<g fill="#7c8077" stroke="#59625b" stroke-width="2"><rect x="66" y="114" width="45" height="44" rx="3"/><rect x="114" y="112" width="45" height="46" rx="3"/><rect x="162" y="108" width="45" height="50" rx="3"/><rect x="210" y="109" width="45" height="49" rx="3"/><rect x="258" y="113" width="32" height="45" rx="3"/></g>
+<text x="25" y="236" font-size="24" font-weight="700" fill="#1b4537">Linija kamenja</text>
+<text x="25" y="263" font-size="16" fill="#556b5d">Možda ostatak starog zida?</text>
+<text x="25" y="285" font-size="14" fill="#a26733">Možda novija ograda.</text>
+</g>
+<g transform="translate(806 114)">
+<rect width="355" height="304" rx="16" fill="#fff" stroke="#d1dfd3" stroke-width="2"/>
+<rect x="18" y="20" width="319" height="181" rx="10" fill="#e8eee1"/>
+<path d="M20 140 C90 115 160 135 240 92 S310 78 335 69" fill="none" stroke="#c7b98c" stroke-width="36" stroke-linecap="round"/>
+<path d="M20 140 C90 115 160 135 240 92 S310 78 335 69" fill="none" stroke="#88795a" stroke-width="3" stroke-dasharray="10 10"/>
+<path d="M49 54 L62 74 M50 75 L64 50 M278 154 L294 173" stroke="#639e72" stroke-width="5"/>
+<text x="25" y="236" font-size="24" font-weight="700" fill="#1b4537">Dugačak trag</text>
+<text x="25" y="263" font-size="16" fill="#556b5d">Možda drevna staza?</text>
+<text x="25" y="285" font-size="14" fill="#a26733">Možda današnji poljski put.</text>
+</g></g>
+<rect x="40" y="439" width="1121" height="43" rx="10" fill="#fff2d8"/>
+<text x="59" y="466" font-size="16" font-family="Arial,sans-serif" fill="#654b26">Ovo su pitanja za buduće istraživanje. Nijedan od ovih oblika nije prikazan kao otkriće u Botunu.</text>
+</svg>
