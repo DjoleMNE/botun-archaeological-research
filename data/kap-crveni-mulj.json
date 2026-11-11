@@ -31,5 +31,26 @@
     "Vladin plan sanacije nije potvrda izvedenih radova",
     "Odvojeno odlagalište nije treći bazen",
     "Granični poligoni bazena nijesu utvrđeni u ovom projektu"
-  ]
+  ],
+  "kap_satellite_comparison": {
+    "title_me": "KAP i okolina: stvarni satelitski snimci",
+    "image": "assets/figures/kap_okolina_sentinel_me.svg",
+    "source_url": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a",
+    "observation_dates": [
+      "2026-04-25",
+      "2026-10-04"
+    ],
+    "research_origin": "public-export/kap/manifest.json",
+    "source_git_blob": "e8b0912a7fc69d4f4c68d4cbfb7afba774a865dd",
+    "human_verified": false,
+    "boundary_status": "Pojedinačne granice bazena još nijesu potvrđene ni objavljene kao GIS geometrija.",
+    "limitations_me": "Snimci ne potvrđuju hemijski sastav, zagađenje, sanaciju niti bezbjednost."
+  },
+  "documentary_drawing": {
+    "source_url": "https://epa.org.me/wp-content/uploads/2023/01/EIA-crveni-mulj.pdf",
+    "drawing_date": "2021-01",
+    "source_pdf_physical_page": 199,
+    "status": "Crtež oznaka A i B postoji. Georeferenciranje i granice nijesu nezavisno potvrđeni.",
+    "public_geometry_available": false
+  }
 }

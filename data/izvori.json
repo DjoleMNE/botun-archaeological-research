@@ -1,0 +1,84 @@
+{
+  "updated_at": "2026-11-11",
+  "human_verified": false,
+  "entries": [
+    {
+      "name": "NASA GEDI / ICESat-2",
+      "status": "active",
+      "description_me": "Laserska mjerenja na odabranim putanjama.",
+      "url": "https://search.earthdata.nasa.gov/"
+    },
+    {
+      "name": "NASADEM / Copernicus GLO-30",
+      "status": "active",
+      "description_me": "Prikaz visina šireg predjela; ne prikazuje pouzdano male zidove.",
+      "url": "https://planetarycomputer.microsoft.com/dataset/nasadem"
+    },
+    {
+      "name": "Copernicus Sentinel-2",
+      "status": "active",
+      "description_me": "Stvarni snimci i poređenja izgleda predjela.",
+      "url": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a"
+    },
+    {
+      "name": "NASA/USGS Landsat",
+      "status": "active",
+      "description_me": "Odabrani snimci iz 2016. i 2026. godine.",
+      "url": "https://www.usgs.gov/landsat-missions/landsat-collection-2-level-2-science-products"
+    },
+    {
+      "name": "OpenStreetMap",
+      "status": "active",
+      "description_me": "Osnovna karta za snalaženje; nije zvanični katastar.",
+      "url": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "name": "Vlada Crne Gore",
+      "status": "documentary_active",
+      "description_me": "Dokumentacija o KAP-u, bazenima i odlukama o sanaciji.",
+      "url": "https://www.gov.me/dokumenta/005b9716-8a11-49f8-a7d6-f0cf1b4c0608"
+    },
+    {
+      "name": "RTCG / Vijesti",
+      "status": "documentary_active",
+      "description_me": "Dopunski izvještaji i izjave; najava radova ne znači da su radovi završeni.",
+      "url": "https://rtcg.me/"
+    },
+    {
+      "name": "DTM01 / SMATSA",
+      "status": "specification_only",
+      "description_me": "Pronađen je opis proizvoda; detaljni podaci za Botun nijesu pribavljeni.",
+      "url": "https://smatsa.rs/upload/vfraip/published/pdf/gen/VFR_LY_GEN_3_1_en.pdf"
+    },
+    {
+      "name": "Podgorica — opštinski planski inventar lokaliteta",
+      "status": "documentary_active",
+      "description_me": "Javno navedena istorijska i arheološka mjesta u okolini; ovo nije potvrda njihove starosti ni granica.",
+      "url": "https://skupstina.podgorica.me/wp-content/uploads/2025/11/Tekstualni-dio.pdf"
+    },
+    {
+      "name": "EPA Crne Gore — elaborat o bazenima",
+      "status": "new_research",
+      "description_me": "Pronađen je dokument sa geodetskim crtežom oba bazena. Usklađivanje sa satelitskom kartom još nije završeno.",
+      "url": "https://epa.org.me/wp-content/uploads/2023/01/EIA-crveni-mulj.pdf"
+    },
+    {
+      "name": "ESA WorldCover",
+      "status": "candidate",
+      "description_me": "Može pomoći u prikazu šuma, njiva i izgrađenih površina. Još nije obrađen za ovaj sajt.",
+      "url": "https://esa-worldcover.org/en/data-access"
+    },
+    {
+      "name": "JRC Global Surface Water",
+      "status": "candidate",
+      "description_me": "Može prikazati istoriju površinskih voda. Ne pokazuje hemijski sastav vode. Još nije obrađen za ovaj sajt.",
+      "url": "https://global-surface-water.appspot.com/download"
+    },
+    {
+      "name": "Copernicus Sentinel-1",
+      "status": "candidate",
+      "description_me": "Radarski snimci mogu dopuniti pregled predjela kada ima oblaka. Još nijesu obrađeni za ovaj sajt.",
+      "url": "https://dataspace.copernicus.eu/explore-data/data-collections/sentinel-data/sentinel-1"
+    }
+  ]
+}

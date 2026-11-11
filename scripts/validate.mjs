@@ -58,3 +58,20 @@ const kap=fs.readFileSync("kap-crveni-mulj.html","utf8");
 for(const term of ["420.000 m²","7–8 miliona tona","Bazen A","Bazen B","nije provjerio niti potvrdio nijedan čovjek"])assert(kap.includes(term),"Missing KAP label: "+term);
 for(const name of pages){const html=fs.readFileSync(name,"utf8");assert((html.match(/href="kap-crveni-mulj.html"/g)||[]).length>=2,name+": KAP navigation links missing");}
 assert(JSON.parse(fs.readFileSync("data/kap-crveni-mulj.json","utf8")).facts.basins===2,"Basin data invalid");
+
+const sourceCatalogue=JSON.parse(fs.readFileSync("data/izvori.json","utf8"));
+assert(sourceCatalogue.entries.length>=13,"Public source catalogue incomplete");
+for(const status of ["active","documentary_active","new_research","specification_only","candidate"]){
+ assert(sourceCatalogue.entries.some(e=>e.status===status),"Missing source status "+status);
+}
+const currentKap=fs.readFileSync("kap-crveni-mulj.html","utf8");
+assert(currentKap.includes("kap_okolina_sentinel_me.svg"),"KAP-specific image missing from page");
+assert(currentKap.includes("2021.")&&currentKap.includes("Agencije za zaštitu životne sredine"),"Official EPA boundary evidence missing");
+assert(currentKap.includes("nijesu ucrtane potvrđene granice"),"KAP boundary limitation missing");
+assert(fs.statSync("assets/figures/kap_okolina_sentinel_me.svg").size>1000000,"KAP actual image missing");
+const aboutSources=fs.readFileSync("o-projektu.html","utf8");
+for(const txt of ["Podaci koje smo već koristili","Zvanični dokumenti i javni izvještaji","Dodatni izvori koje tek možemo istražiti"]) {
+ assert(aboutSources.includes(txt),"Missing source status disclosure: "+txt);
+}
+const kapStructure=currentKap.indexOf('id="kap-satelit"');
+assert(kapStructure>0&&kapStructure<currentKap.indexOf('id="kap-fakti"'),"KAP actual images must come before background text");
