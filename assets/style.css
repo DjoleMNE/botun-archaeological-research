@@ -298,3 +298,49 @@
 .landscape-summary{color:#52645b;max-width:1000px;font-size:.92rem;line-height:1.65;margin:22px 0 0}
 @media(max-width:850px){.landscape-grid{grid-template-columns:minmax(0,1fr);gap:22px}.landscape-card{max-width:680px;width:100%;margin:0 auto}}
 @media(max-width:780px){.landscape-section{padding-top:44px;padding-bottom:48px}.landscape-heading>p{max-width:none}.landscape-intro{font-size:1rem;padding:15px 17px}.landscape-card figcaption{padding:18px}.landscape-card figcaption h3{font-size:1.3rem}.landscape-card .landscape-attribution{font-size:.9rem}.landscape-summary{font-size:1rem}}
+
+
+/* KAP industrial context — no pollution findings inferred from imagery */
+.kap-head{background:linear-gradient(125deg,#163b33,#255d4e);color:#fff;padding:60px 0}
+.kap-head-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:45px;align-items:center}
+.kap-head .kicker{color:#dce9ac}
+.kap-head h1{font-size:clamp(2.55rem,5vw,4.7rem);color:#fff;line-height:1.13}
+.kap-head h1 em{color:#d5eaaa}
+.kap-intro-text{font-size:1.2rem;line-height:1.7;color:#eef6ee}
+.kap-alert{background:#ffffff15;border-left:4px solid #d0e6ad;border-radius:6px;padding:17px 20px;margin:25px 0;font-size:1.04rem;line-height:1.65}
+.kap-facts{background:#f8fbf5;color:#1e4134;border-radius:13px;padding:28px}
+.kap-facts>span{font-size:.82rem;font-weight:800;letter-spacing:.08em;color:#2d7356}
+.kap-facts>div{border-bottom:1px solid #d9e4da;padding:17px 0}
+.kap-facts strong{font-size:clamp(2rem,3.3vw,2.8rem);display:block;line-height:1.2}
+.kap-facts small{display:block;color:#557064;font-size:1rem;line-height:1.4;margin-top:4px}
+.kap-facts a{display:block;margin-top:18px;font-weight:800}
+.kap-columns,.kap-costs,.kap-sources{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.kap-columns article,.kap-sources article{min-width:0;background:#fff;border:1px solid #d1dfd5;border-top:4px solid #6b957a;border-radius:11px;padding:24px}
+.kap-columns article>span{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:#326b50;font-weight:850}
+.kap-columns h3,.kap-sources h3{font-size:1.3rem}
+.kap-columns p,.kap-sources p{font-size:1.03rem;line-height:1.7;color:#52675c}
+.kap-unknown{border-top-color:#cb9b53!important;background:#fffaf4!important}
+.kap-soft{background:#f1f5ef}.kap-soft>.shell>p{font-size:1.06rem;line-height:1.7}
+.kap-basin-bars{display:flex;gap:17px;min-height:195px;margin:25px 0}
+.kap-basin-bars>div{display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;border-radius:13px;gap:9px;padding:16px 10px;text-align:center}
+.kap-basin-a{flex:20;background:linear-gradient(140deg,#8a4c3c,#b9734c)}
+.kap-basin-b{flex:22;background:linear-gradient(140deg,#8b523f,#d39865)}
+.kap-basin-bars strong{font-size:1.15rem}.kap-basin-bars span{font-size:clamp(1.65rem,3.2vw,2.6rem);font-weight:850}
+.kap-note{padding:16px 20px;border-left:4px solid #c69b5a;background:#fff8ec;border-radius:7px;font-size:1rem;line-height:1.7}
+.kap-costs>div{background:#1b4a3d;color:#fff;border-radius:12px;padding:25px}
+.kap-costs>div+div{background:#3d6059}
+.kap-costs strong{display:block;font-size:clamp(1.8rem,3.4vw,2.7rem);line-height:1.2;margin-bottom:12px}
+.kap-costs span{font-size:1rem;line-height:1.6;color:#edf3ec}
+.kap-chronology{list-style:none;padding-left:25px;border-left:3px solid #94b6a0;margin:25px 0}
+.kap-chronology li{padding:14px 18px;background:#fff;border:1px solid #d3e0d8;border-radius:9px;margin:0 0 13px 12px;position:relative;font-size:1rem;line-height:1.55}
+.kap-chronology li::before{content:"";width:12px;height:12px;border-radius:50%;background:#366e51;position:absolute;left:-22px;top:18px;border:3px solid white;box-shadow:0 0 0 1px #8cae97}
+.kap-chronology time{font-weight:850;margin-right:8px;color:#226443}
+.kap-image-card{display:grid;grid-template-columns:1.1fr .9fr;background:#f1f6f1;border:1px solid #d1dfd4;overflow:hidden;border-radius:12px}
+.kap-image-card img{width:100%;height:auto;display:block}
+.kap-image-card>div{padding:24px;align-self:center}.kap-image-card p{font-size:1rem;line-height:1.7;color:#50665a}
+.kap-next{background:#e5f0e4;padding:23px 25px;border-radius:10px;margin-top:24px}
+.kap-next p{color:#53655b;font-size:1rem;line-height:1.7}
+.kap-teaser{background:#f7f7f0;border:1px solid #d3e0d0;border-radius:12px;display:flex;gap:24px;align-items:center;justify-content:space-between;margin-top:28px;margin-bottom:16px;padding-top:26px;padding-bottom:26px}
+.kap-teaser h2{font-size:1.7rem}.kap-teaser p{font-size:1rem;max-width:770px;color:#53655b}.kap-teaser .button{background:#1d5846;color:#fff;white-space:nowrap}
+@media(max-width:940px){.kap-head-grid,.kap-image-card{grid-template-columns:1fr}}
+@media(max-width:780px){.kap-head{padding:40px 0}.kap-head h1{font-size:clamp(2.35rem,7.5vw,3.1rem)}.kap-head-grid{gap:24px}.kap-columns,.kap-costs,.kap-sources{grid-template-columns:1fr;gap:14px}.kap-columns article,.kap-sources article{padding:19px}.kap-basin-bars{gap:8px;min-height:155px}.kap-basin-bars strong{font-size:.96rem}.kap-basin-bars span{font-size:1.7rem}.kap-basin-bars small{font-size:.78rem}.kap-image-card>div{padding:18px}.kap-teaser{display:block;padding-top:22px;padding-bottom:22px}.kap-teaser .button{display:flex;margin-top:17px;width:100%;white-space:normal}}

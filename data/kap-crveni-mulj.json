@@ -1,0 +1,35 @@
+{
+  "updated_at": "2026-11-11",
+  "status": "AI_sažetak_javnih_izvora_bez_ljudske_provjere",
+  "topic": "Kombinat aluminijuma i bazeni crvenog mulja",
+  "facts": {
+    "start_year": 1971,
+    "alumina_stop_year": 2009,
+    "basins": 2,
+    "basin_a_approx_m2": 200000,
+    "basin_b_approx_m2": 220000,
+    "combined_approx_m2": 420000,
+    "mud_generated_tonnes_range": [
+      7000000,
+      8000000
+    ],
+    "public_interest_date": "2026-01-29",
+    "dust_incident_date": "2025-06-09",
+    "basins_project_estimated_eur_ex_vat": 31676045.36,
+    "other_solid_waste_project_eur_ex_vat": 12793587
+  },
+  "sources": [
+    "https://www.gov.me/dokumenta/005b9716-8a11-49f8-a7d6-f0cf1b4c0608",
+    "https://www.gov.me/clanak/saopstenje-sa-111-sjednice-vlade-crne-gore",
+    "https://www.gov.me/clanak/saopstenje-sa-107-sjednice-vlade-crne-gore",
+    "https://rtcg.me/vijesti/ekologija/876058/mdup-eksproprijacija-zemljista-na-lokaciji-crvenog-mulja-radi-smanjenja-ekoloskog-rizika.html",
+    "https://www.vijesti.me/tv/emisije/826174/culafic-sanacija-bazena-crvenog-mulja-u-botunu-mogla-bi-poceti-u-prvoj-polovini-naredne-godine"
+  ],
+  "limitations": [
+    "Nema terenske provjere AI agenta",
+    "Satelitska boja nije dokaz hemijskog zagađenja",
+    "Vladin plan sanacije nije potvrda izvedenih radova",
+    "Odvojeno odlagalište nije treći bazen",
+    "Granični poligoni bazena nijesu utvrđeni u ovom projektu"
+  ]
+}
