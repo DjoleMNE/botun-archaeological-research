@@ -1,62 +1,61 @@
 {
   "updated_at": "2026-11-11",
-  "review_note": "Ove podatke su obradili AI agenti. Rezultate nije provjerio niti potvrdio nijedan čovjek.",
   "datasets": [
     {
       "id": "gedi",
       "name": "NASA GEDI",
-      "status": "in_progress",
       "note": "AI obrada je pronašla 98.448 laserskih mjerenja unutar istraživanog područja. Njih 31.327 prolazi početnu provjeru kvaliteta. Mjerenja su raspoređena duž putanja satelita; ne daju detaljnu sliku svakog dijela terena.",
-      "source_url": "https://search.earthdata.nasa.gov/"
+      "source_url": "https://search.earthdata.nasa.gov/",
+      "status": "in_progress"
     },
     {
       "id": "icesat2",
       "name": "NASA ICESat-2",
-      "status": "in_progress",
       "note": "Obrađeno je 27.535 zapisa o kratkim djelovima putanje satelita i zaseban uzorak od 6.313 povrataka laserske svjetlosti. Dodati su podaci o atmosferskim uslovima radi bolje procjene pouzdanosti. Ovo nije neprekidan snimak terena niti potvrda arheoloških ostataka.",
-      "source_url": "https://nsidc.org/data/atl08/versions/7"
+      "source_url": "https://nsidc.org/data/atl08/versions/7",
+      "status": "in_progress"
     },
     {
       "id": "terrain",
       "name": "Regionalni modeli visina",
-      "status": "verified",
       "note": "Preuzeti su modeli koji prikazuju visinu terena i površine. Razmak između susjednih ćelija je približno 30 metara. Nijesu dovoljno detaljni da bi se njima potvrdili mali zidovi, humke ili slični ostaci.",
-      "source_url": "https://planetarycomputer.microsoft.com/dataset/nasadem"
+      "source_url": "https://planetarycomputer.microsoft.com/dataset/nasadem",
+      "status": "verified"
     },
     {
       "id": "sentinel2",
       "name": "Sentinel-2",
-      "status": "verified",
-      "note": "Upoređeni su satelitski snimci iz aprila i oktobra 2026. Razlike u zelenilu mogu nastati zbog godišnjeg doba, obrade zemlje ili drugih savremenih uticaja. Same po sebi nijesu dokaz arheoloških ostataka.",
-      "source_url": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a"
+      "note": "Uz ranije proljećno i jesenje poređenje, sada je obrađeno pet jesenjih datuma iz 2021, 2023, 2024, 2025. i 2026. za cijelo definisano područje. Porede se isti raspoloživi pikseli. To nijesu godišnji prosjeci, dokaz uzroka promjena ili arheološki nalazi.",
+      "source_url": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-c1-l2a",
+      "status": "verified"
     },
     {
       "id": "landsat",
       "name": "NASA/USGS Landsat",
-      "status": "verified",
       "note": "Upoređeni su odabrani satelitski snimci iz 2016. i 2026. godine. Dva snimka pokazuju stanje u dva trenutka, ali nijesu dovoljna da objasne zašto se neki dio predjela promijenio.",
-      "source_url": "https://www.usgs.gov/landsat-missions/landsat-collection-2-level-2-science-products"
+      "source_url": "https://www.usgs.gov/landsat-missions/landsat-collection-2-level-2-science-products",
+      "status": "verified"
     },
     {
       "id": "dtm01",
       "name": "Crnogorski model terena DTM01",
-      "status": "blocked",
-      "note": "Pronađen je zvanični opis znatno detaljnijeg modela terena DTM01, sa razmakom od jednog metra. Podaci za Botun i uslovi njihovog korišćenja još nijesu pribavljeni.",
-      "source_url": "https://smatsa.rs/upload/vfraip/published/pdf/gen/VFR_LY_GEN_3_1_en.pdf"
+      "note": "Pronađen je opis detaljnijeg modela terena DTM01, ali podaci za Botun nijesu pribavljeni. Faza traženja državnih podataka preskočena je prema zahtjevu vlasnika projekta.",
+      "source_url": "https://smatsa.rs/upload/vfraip/published/pdf/gen/VFR_LY_GEN_3_1_en.pdf",
+      "status": "blocked"
     },
     {
       "id": "worldcover2021",
       "name": "ESA WorldCover 2021",
-      "status": "in_progress",
-      "note": "Preuzeta je i objavljena na sajtu karta pokrivača zemljišta za područje Botuna iz 2021. Automatska procjena može pogriješiti i ne predstavlja današnje stanje, vlasništvo ili arheološke nalaze.",
-      "source_url": "https://esa-worldcover.org/en/data-access"
+      "note": "Karta pokrivača zemljišta iz 2021. godine preuzeta je i prikazana na sajtu. To nije katastar, današnje stanje niti dokaz arheoloških ostataka.",
+      "source_url": "https://esa-worldcover.org/en/data-access",
+      "status": "in_progress"
     },
     {
       "id": "jrcwater",
       "name": "Istorija površinskih voda",
-      "status": "in_progress",
-      "note": "Preuzeta je i objavljena karta istorijske učestalosti površinske vode za period 1984–2024. Podaci ne pokazuju današnju vodu, njenu hemiju, podzemnu vodu ili rizik od poplave.",
-      "source_url": "https://global-surface-water.appspot.com/download"
+      "note": "Karta istorijske učestalosti površinske vode od 1984. do 2024. preuzeta je i prikazana. Ne prikazuje podzemnu vodu ni zagađenje.",
+      "source_url": "https://global-surface-water.appspot.com/download",
+      "status": "in_progress"
     }
   ],
   "updates": [
@@ -119,6 +118,36 @@
       "date": "2026-11-11",
       "title": "Pregled po zonama i provjera istorijskih izvora",
       "description": "Podaci su dodatno obrađeni za područja do 3 km, od 3 do 5 km i od 5 do 10 km od Botuna. Razlike u pet zapisa iz jednog poređenja NASA verzija potiču od pomjeranja koordinata preko granice područja. Pregled krupnih oblika terena nije dao osnov da se proglasi arheološki kandidat. Opštinski dokument daje tragove za dalju istorijsku provjeru. Brojevi ranije obrađenih laserskih mjerenja ostaju isti; potpunost podataka još se provjerava. Rezultate nije provjerio čovjek."
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Dublja provjera terena i pet jesenjih datuma",
+      "description": "Provjereno je devet podešavanja računarskog pregleda terena, uz provjere rastinja, savremenih površina i osjetljivosti na položaj snimka. Dva odvojena AI agenta pregledala su isti skup od dvanaest šifrovanih prikaza. Nije utvrđen dovoljno potkrijepljen arheološki kandidat. Dodatno je obrađeno pet jesenjih satelitskih datuma za cijelo područje; promjene zelenila ne objašnjavaju uzrok niti dokazuju arheologiju. Rezultate nije provjerio čovjek."
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Početak zasebnog pregleda kolektora i postrojenja",
+      "description": "Preuzeti su elaborat i javni izvještaji o postrojenju za otpadne vode u Botunu. Odvojeno se vode planirane cjeline, izvještaji o radovima i otvorena pitanja. Karta projekta i posebno satelitsko poređenje gradilišta još nijesu završeni. Ovaj pregled ne potvrđuje puštanje u rad, uticaj na zdravlje ili kvalitet vode."
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Dodatni pregled tri oblika kroz više godina",
+      "description": "Uporedili smo tri ranije odabrana primjera na pet jesenjih satelitskih snimaka. Oblici se vide kroz više godina, ali njihov izgled ne pokazuje kada su nastali ni da li imaju arheološko značenje. Ovom provjerom nijesmo dobili dovoljno dokaza da bilo koji primjer označimo kao moguće arheološko nalazište. Rezultate nije provjerio čovjek."
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Stvarni satelitski snimci šire lokacije kolektora",
+      "description": "Pripremljeni su uporedivi prikazi prostora između Morače i KAP-a iz 2021, 2025. i 2026. Pribavljeni su noviji elaborat iz 2025. i objavljena skenirana kopija ugovora sa potpisima. Tačna granica projekta i sadržaj potpisane dozvole još se provjeravaju. Snimci ne potvrđuju procenat završenosti, zagađenje ili uticaj na zdravlje. Rezultate nije provjerio čovjek."
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Dodatna provjera položaja bazena KAP-a",
+      "description": "Rubovi nasipa sa nacrta iz 2021. upoređeni su sa stvarnim snimkom iz septembra iste godine. Automatsko traženje rubova daje različite moguće položaje. Zato nijesmo pomjerali nacrt niti objavili obrise kao provjerene granice. Rezultate nije provjerio čovjek."
+    },
+    {
+      "date": "2026-11-11",
+      "title": "Direktan pregled stvarnih laserskih mjerenja",
+      "description": "Pregledali smo razlike u visini neposredno iz stvarnih NASA laserskih mjerenja, odvojeno od pregleda fotografija. Dva manja signala dodatno su provjerena prema kvalitetu, drugim prolazima i okolnom zemljištu. Savremena infrastruktura i način poređenja visina pružaju važna druga objašnjenja. Kod ranije odabranih oblika mjerenja potvrđuju dio šireg reljefa, ali ostavljaju praznine. Nijesmo dobili dovoljno dokaza za arheološkog kandidata. Rezultate nije provjerio čovjek."
     }
   ]
 }

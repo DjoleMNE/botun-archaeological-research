@@ -134,6 +134,22 @@ for(const p of pages){
  }
 }
 const cd=JSON.parse(fs.readFileSync("data/kolektor-botun.json","utf8"));
-assert(cd.human_verified===false&&cd.sources.length===4,"Collector provenance invalid");
+assert(cd.human_verified===false&&cd.sources.length===7,"Collector provenance invalid");
 assert(!collectorHtml.includes("cadastral_grid_lead_private"),"Do not expose research control points");
 assert(!fs.existsSync("dnevnik.html"),"Dnevnik remains removed");
+
+/* R017-R018 public research assets, no target coordinates or unsupported site placement */
+for(const f of ["osjetljivost_pregleda_me.svg","zelenilo_pet_jeseni_me.svg","collector_context_2021_2025_2026_me.svg"]){
+ const raw=fs.readFileSync("assets/figures/"+f,"utf8");
+ assert(raw.includes("<svg")&&raw.includes("</svg>"),f+": source image missing");
+ assert(!raw.includes("<script"),f+": active SVG content prohibited");
+}
+const phasePage=fs.readFileSync("istrazivanje.html","utf8");
+assert(phasePage.includes("osjetljivost_pregleda_me.svg")&&phasePage.includes("zelenilo_pet_jeseni_me.svg"),"Two R017 figures not published");
+assert(phasePage.includes("341 laserski niz"),"Laser-first work absent");
+const collectorPage=fs.readFileSync("kolektor-botun.html","utf8");
+assert(collectorPage.includes("collector_context_2021_2025_2026_me.svg"),"R018 context image absent");
+assert(collectorPage.includes("nije precizna mapa")||collectorPage.includes("ne precizna mapa"),"Collector area uncertainty absent");
+assert(!collectorPage.includes("cadastral_grid_lead_private"),"Private geography included");
+const newResearch=JSON.parse(fs.readFileSync("data/research.json","utf8"));
+assert(newResearch.updates.length===18,"R018 progress updates not synchronized");

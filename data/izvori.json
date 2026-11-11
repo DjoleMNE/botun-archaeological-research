@@ -18,7 +18,7 @@
       "name": "Copernicus Sentinel-2",
       "status": "active",
       "description_me": "Stvarni snimci i poređenja izgleda predjela.",
-      "url": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a"
+      "url": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-c1-l2a"
     },
     {
       "name": "NASA/USGS Landsat",
@@ -91,6 +91,24 @@
       "status": "documentary_active",
       "description_me": "Izjave o napretku određenih građevinskih dijelova 2026, ne ukupnoj završenosti ili radu.",
       "url": "https://podgorica.me/mujovic-i-culafic-obisli-radove-na-postrojenju-za-preciscavanje-otpadnih-voda-u-botunu-zadovoljni-smo-dinamikom-do-60-gradevinskih-radova-zavrseno-na-pojedinim-djelovima-postrojenja/"
+    },
+    {
+      "name": "Korigovani elaborat, jul 2025.",
+      "status": "documentary_active",
+      "description_me": "Novija projektna dokumentacija iz 2025.",
+      "url": "https://epa.org.me/wp-content/uploads/2025/09/KORIGOVANI-ELABORAT-31-07-25.pdf"
+    },
+    {
+      "name": "Glavni grad: objavljena ugovorna dokumentacija, 10. decembar 2025.",
+      "status": "documentary_active",
+      "description_me": "Javno objavljeni ugovorni dokumenti ne potvrđuju završetak radova.",
+      "url": "https://podgorica.me/javno-obavjestenje-o-pristupu-ugovoru-o-izgradnji-sistema-za-preciscavanje-otpadnih-voda/"
+    },
+    {
+      "name": "Službeni zapis dozvole; njen PDF još nije pregledan",
+      "status": "specification_only",
+      "description_me": "Postoji javni zapis, ali potpisani dokument i uslovi nijesu preuzeti.",
+      "url": "https://www.gov.me/en/documents/671cacb0-b310-4b30-aa8d-e2fd6d68ce68"
     }
   ]
 }
