@@ -14,15 +14,11 @@
       if(d.source_url&&/^https:\/\//.test(d.source_url)){var a=el("a","", "Pogledaj izvor podataka ↗");a.href=d.source_url;a.target="_blank";a.rel="noopener noreferrer";card.appendChild(a);}
       ds.appendChild(card);
     });}
-    var log=document.getElementById("research-diary");
-    if(log){log.replaceChildren();(data.updates||[]).forEach(function(u){
-      var card=el("article","timeline-item");var time=el("time","",safeDate(u.date));time.dateTime=u.date;card.appendChild(time);
-      card.appendChild(el("h2","",u.title));card.appendChild(el("p","",u.description));log.appendChild(card);
-    });}
+
   }
-  if(document.getElementById("dataset-list")||document.getElementById("research-diary")){
+  if(document.getElementById("dataset-list")){
     fetch("data/research.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error("network");return r.json();}).then(renderData).catch(function(){
-      ["dataset-list","research-diary"].forEach(function(id){var root=document.getElementById(id);if(root){root.replaceChildren(el("p","", "Pregled podataka trenutno nije dostupan. Pokušajte kasnije. Ova greška ne mijenja status istraživanja."));}});
+      ["dataset-list"].forEach(function(id){var root=document.getElementById(id);if(root){root.replaceChildren(el("p","", "Pregled podataka trenutno nije dostupan. Pokušajte kasnije. Ova greška ne mijenja status istraživanja."));}});
     });
   }
   var mapDiv=document.getElementById("research-map");

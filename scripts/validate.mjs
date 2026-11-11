@@ -1,7 +1,7 @@
 
 import fs from "node:fs";
 import assert from "node:assert/strict";
-const pages=["index.html","mapa.html","istrazivanje.html","metod.html","dnevnik.html","o-projektu.html","404.html"];
+const pages=["index.html","mapa.html","istrazivanje.html","metod.html","o-projektu.html","404.html"];
 for(const name of pages){
  const s=fs.readFileSync(name,"utf8");
  assert(s.includes('lang="cnr-Latn"'),name+": wrong language");
@@ -29,3 +29,14 @@ assert(homepage.includes("ne prikazuju") || homepage.includes("ne prikazuju povr
 const updates=data.updates||[];
 assert(updates.length>=2,"Research log must include most recent public-safe update");
 console.log("Provjera završena: sve javne stranice sadrže obavještenje, a javni podaci i granice odgovaraju osnovnim pravilima.");
+
+const CSS=fs.readFileSync("assets/style.css","utf8");
+assert(CSS.includes(".mobile-navigation"),"mobile navigation styling missing");
+assert(CSS.includes("max-width:780px"),"mobile breakpoint missing");
+assert(!fs.existsSync("dnevnik.html"),"Dnevnik page must be removed");
+for(const name of pages){
+ const markup=fs.readFileSync(name,"utf8");
+ assert(markup.includes('class="mobile-navigation"'),name+": missing phone menu");
+ assert(markup.includes('aria-label="Navigacija za telefon"'),name+": missing accessible phone nav");
+ assert(!markup.includes('href="dnevnik.html"'),name+": orphaned diary link");
+}
