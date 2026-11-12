@@ -1,61 +1,61 @@
 {
-  "updated_at": "2026-11-11",
+  "updated_at": "2026-11-12",
   "datasets": [
     {
       "id": "gedi",
       "name": "NASA GEDI",
+      "status": "in_progress",
       "note": "AI obrada je pronašla 98.448 laserskih mjerenja unutar istraživanog područja. Njih 31.327 prolazi početnu provjeru kvaliteta. Mjerenja su raspoređena duž putanja satelita; ne daju detaljnu sliku svakog dijela terena.",
-      "source_url": "https://search.earthdata.nasa.gov/",
-      "status": "in_progress"
+      "source_url": "https://search.earthdata.nasa.gov/"
     },
     {
       "id": "icesat2",
       "name": "NASA ICESat-2",
+      "status": "in_progress",
       "note": "Obrađeno je 27.535 zapisa o kratkim djelovima putanje satelita i zaseban uzorak od 6.313 povrataka laserske svjetlosti. Dodati su podaci o atmosferskim uslovima radi bolje procjene pouzdanosti. Ovo nije neprekidan snimak terena niti potvrda arheoloških ostataka.",
-      "source_url": "https://nsidc.org/data/atl08/versions/7",
-      "status": "in_progress"
+      "source_url": "https://nsidc.org/data/atl08/versions/7"
     },
     {
       "id": "terrain",
       "name": "Regionalni modeli visina",
+      "status": "verified",
       "note": "Preuzeti su modeli koji prikazuju visinu terena i površine. Razmak između susjednih ćelija je približno 30 metara. Nijesu dovoljno detaljni da bi se njima potvrdili mali zidovi, humke ili slični ostaci.",
-      "source_url": "https://planetarycomputer.microsoft.com/dataset/nasadem",
-      "status": "verified"
+      "source_url": "https://planetarycomputer.microsoft.com/dataset/nasadem"
     },
     {
       "id": "sentinel2",
       "name": "Sentinel-2",
+      "status": "verified",
       "note": "Uz ranije proljećno i jesenje poređenje, sada je obrađeno pet jesenjih datuma iz 2021, 2023, 2024, 2025. i 2026. za cijelo definisano područje. Porede se isti raspoloživi pikseli. To nijesu godišnji prosjeci, dokaz uzroka promjena ili arheološki nalazi.",
-      "source_url": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-c1-l2a",
-      "status": "verified"
+      "source_url": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-c1-l2a"
     },
     {
       "id": "landsat",
       "name": "NASA/USGS Landsat",
+      "status": "verified",
       "note": "Upoređeni su odabrani satelitski snimci iz 2016. i 2026. godine. Dva snimka pokazuju stanje u dva trenutka, ali nijesu dovoljna da objasne zašto se neki dio predjela promijenio.",
-      "source_url": "https://www.usgs.gov/landsat-missions/landsat-collection-2-level-2-science-products",
-      "status": "verified"
+      "source_url": "https://www.usgs.gov/landsat-missions/landsat-collection-2-level-2-science-products"
     },
     {
       "id": "dtm01",
       "name": "Crnogorski model terena DTM01",
+      "status": "blocked",
       "note": "Pronađen je opis detaljnijeg modela terena DTM01, ali podaci za Botun nijesu pribavljeni. Faza traženja državnih podataka preskočena je prema zahtjevu vlasnika projekta.",
-      "source_url": "https://smatsa.rs/upload/vfraip/published/pdf/gen/VFR_LY_GEN_3_1_en.pdf",
-      "status": "blocked"
+      "source_url": "https://smatsa.rs/upload/vfraip/published/pdf/gen/VFR_LY_GEN_3_1_en.pdf"
     },
     {
       "id": "worldcover2021",
       "name": "ESA WorldCover 2021",
-      "note": "Karta pokrivača zemljišta iz 2021. godine preuzeta je i prikazana na sajtu. To nije katastar, današnje stanje niti dokaz arheoloških ostataka.",
-      "source_url": "https://esa-worldcover.org/en/data-access",
-      "status": "in_progress"
+      "status": "in_progress",
+      "note": "Karta pokrivača zemljišta iz 2021. godine preuzeta je i prikazana na sajtu. Ne dokazuje arheološke ostatke.",
+      "source_url": "https://esa-worldcover.org/en/data-access"
     },
     {
       "id": "jrcwater",
       "name": "Istorija površinskih voda",
-      "note": "Karta istorijske učestalosti površinske vode od 1984. do 2024. preuzeta je i prikazana. Ne prikazuje podzemnu vodu ni zagađenje.",
-      "source_url": "https://global-surface-water.appspot.com/download",
-      "status": "in_progress"
+      "status": "in_progress",
+      "note": "Karta istorijske površinske vode 1984–2024. prikazana je na sajtu. Ne pokazuje podzemnu vodu ni zagađenje.",
+      "source_url": "https://global-surface-water.appspot.com/download"
     }
   ],
   "updates": [
@@ -148,6 +148,36 @@
       "date": "2026-11-11",
       "title": "Direktan pregled stvarnih laserskih mjerenja",
       "description": "Pregledali smo razlike u visini neposredno iz stvarnih NASA laserskih mjerenja, odvojeno od pregleda fotografija. Dva manja signala dodatno su provjerena prema kvalitetu, drugim prolazima i okolnom zemljištu. Savremena infrastruktura i način poređenja visina pružaju važna druga objašnjenja. Kod ranije odabranih oblika mjerenja potvrđuju dio šireg reljefa, ali ostavljaju praznine. Nijesmo dobili dovoljno dokaza za arheološkog kandidata. Rezultate nije provjerio čovjek."
+    },
+    {
+      "date": "2026-11-12",
+      "title": "Stvarna laserska mjerenja u 3D",
+      "description": "Pripremili smo rotirajući prikaz 2.067 GEDI mjerenja i 1.339 ICESat-2 zapisa iz jednog primjera u istraživanom području. Izvore prikazujemo odvojeno. Možete pročitati visinu i datum svakog zapisa, a praznine ostaju praznine. Ovo nije detaljan snimak cijelog terena niti karta arheoloških nalaza. Podaci su provjereni računarski; 3D pregled je sada uključen na sajt; nezavisan pregled stvarnog mobilnog prikaza još je otvoren."
+    },
+    {
+      "date": "2026-11-12",
+      "title": "Proširena provjera razlika u visini",
+      "description": "Detaljnije smo provjerili svih 13 ranije izdvojenih manjih pozitivnih odstupanja u laserskim profilima. Mijenjali smo okolna mjerenja sa kojima ih poredimo i provjeravali kvalitet podataka. Dva odstupanja ostaju izražena kroz sve isprobane načine poređenja, ali savremeni objekti, vegetacija i način mjerenja ostaju moguća objašnjenja. Nijesmo dobili potkrijepljenog arheološkog kandidata. To ne znači da arheoloških ostataka nema."
+    },
+    {
+      "date": "2026-11-12",
+      "title": "NASA dopuna: nedostajući podaci ostaju otvoreno pitanje",
+      "description": "Pronašli smo odgovarajuće novije zapise za tri NASA datoteke, ali time nijesmo dobili šest nedostajućih djelova mjerenja. Provjeren je i par datoteka potreban za detaljnije razdvajanje tla i vegetacije. Pojedinačni laserski povraci iz tog para još nijesu preuzeti. Broj stvarno pribavljenih mjerenja u istraživanom području ostaje isti."
+    },
+    {
+      "date": "2026-11-12",
+      "title": "Istorijski zapis iz 1894. godine",
+      "description": "U digitalizovanom časopisu Prosvjeta iz 1894. pronađen je zapis o poklonjenom zvonu crkvi Svetog Nikole u Gornjim Kokotima. On pokazuje da se crkva tada pominje, ali ne određuje vrijeme njene gradnje ni starost današnjeg objekta. Druge stare navode i dalje treba provjeriti u izvornim izdanjima."
+    },
+    {
+      "date": "2026-11-12",
+      "title": "KAP: preciznost istorijskih obrisa još nije potvrđena",
+      "description": "Pribavljen je originalni izvještaj čiji opis podržava opšti položaj bazena. Provjerena je i oznaka geodetske tačke na starom crtežu. I dalje nedostaje nezavisan podatak koji bi potvrdio precizno postavljanje izdvojenih obrisa na kartu. Istorijska obala nije isto što i današnja voda, nasip ili katastarska granica. Obrisi ostaju izvan javne karte."
+    },
+    {
+      "date": "2026-11-12",
+      "title": "Kolektor: pročitan je dokument građevinske dozvole",
+      "description": "Pribavljen je zvanično objavljeni PDF sa rješenjem od 30. oktobra 2025. i naknadnom ispravkom od 3. februara 2026. Ispravka mijenja godinu u navodu ranijih urbanističkih uslova. Ovo potvrđuje sadržaj objavljenog dokumenta, a ne završetak radova, početak rada postrojenja ili njegov sadašnji pravni status. Precizna granica projekta na satelitskoj karti ostaje neprovjerena."
     }
   ]
 }

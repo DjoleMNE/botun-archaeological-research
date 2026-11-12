@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11",
+  "updated_at": "2026-11-12",
   "human_verified": false,
   "status": "documentary_and_satellite_context_ready_for_website_review",
   "title_me": "Kolektor i postrojenje za otpadne vode u Botunu",
@@ -38,10 +38,22 @@
       "source_id": "eia2025"
     },
     {
+      "date": "2025-10-30",
+      "title_me": "Datum rješenja o građevinskoj dozvoli",
+      "description_me": "Datum je pročitan u objavljenom skeniranom dokumentu. Dozvola sama po sebi ne potvrđuje završetak gradnje ili rad postrojenja.",
+      "source_id": "permit_pdf"
+    },
+    {
       "date": "2026-01-14",
       "title_me": "Medijski izvještaj sa gradilišta",
       "description_me": "RTCG/MediaBiro izvještava o aktivnosti bagera i protivljenju mještana. To je datirani izvještaj, a ne naše satelitsko mjerenje.",
       "source_id": "rtcg"
+    },
+    {
+      "date": "2026-02-03",
+      "title_me": "Ispravka ranijeg rješenja",
+      "description_me": "U navodu urbanističkih uslova godina 2024. zamijenjena je godinom 2020. Ispravka je uključena u sada preuzeti PDF.",
+      "source_id": "permit_pdf"
     },
     {
       "date": "2026-10-02",
@@ -52,7 +64,7 @@
   ],
   "limitations_me": [
     "Rokovi u starijem ugovoru, projektnom elaboratu i kasnijim izjavama odnose se na različite dokumente i faze. Iz njih nijesmo utvrdili datum puštanja u rad.",
-    "Pronađen je službeni zapis dozvole UPI 06_333_25_5514_32, objavljen 27. januara 2026. PDF trenutno nije preuzet, pa njegov sadržaj, datum izdavanja i uslovi nijesu provjereni.",
+    "Pregledan je objavljeni PDF građevinske dozvole i ispravke. Vidljivi potpisi i pečati nijesu naša provjera autentičnosti, sadašnje pravne važnosti ili početka rada postrojenja.",
     "Satelitski prikaz pokazuje širi prostor. Tačna granica projekta, parcele i mjesto ispusta još nijesu potvrđeni na karti.",
     "Siva mjesta na satelitskom poređenju označavaju izostavljene podatke. Različiti prazni djelovi uz rijeku ne pokazuju nestanak vode.",
     "Ovaj pregled ne utvrđuje uticaj na zdravlje, podzemnu vodu ili zagađenje. Izjave, projektovane vrijednosti i satelitski izgled treba razlikovati od nezavisnih mjerenja."
@@ -90,15 +102,27 @@
     },
     {
       "id": "permit_registry",
-      "name_me": "Službeni zapis dozvole; njen PDF još nije pregledan",
+      "name_me": "Zvanična evidencija građevinske dozvole; preuzeti PDF je pregledan",
       "url": "https://www.gov.me/en/documents/671cacb0-b310-4b30-aa8d-e2fd6d68ce68"
+    },
+    {
+      "id": "permit_pdf",
+      "name_me": "Rješenje od 30. oktobra 2025. i ispravka od 3. februara 2026.",
+      "url": "https://wapi.gov.me/download/8e3cca0e-4b0b-47e5-917d-c0b408f1e0d5?version=1.0"
+    },
+    {
+      "id": "utu",
+      "name_me": "Urbanističko-tehnički uslovi, dokument iz 2020.",
+      "url": "https://www.sekretarijat-za-plurzs.podgorica.me/wp-content/uploads/2020/09/glavni-grad-podgorica-902.pdf"
     }
   ],
   "disclaimer_me": "Rad su izradili isključivo AI agenti na zahtjev Đorđa, koristeći javno dostupne izvore NASA-e i drugih organizacija. Rezultate izvještaja i analiza nije provjerio niti potvrdio nijedan čovjek, uključujući Đorđa.",
-  "revision": "R018",
+  "revision": "R019",
   "source_version_note_me": "Pribavljen je i korigovani elaborat iz jula 2025. Obje verzije navode 12,7 hektara, dok ugovorna specifikacija navodi 12,81 hektar za postrojenje i prostor ispusta zajedno. To su podaci iz različitih dokumenata, a ne naše mjerenje granica. Noviji elaborat mijenja i opis udaljenosti stambenih objekata; stariji podatak ne treba koristiti kao jedini važeći opis.",
   "contract_me": "Na sajtu Glavnog grada dostupna je skenirana kopija ugovora sa datumom 10. jun 2022. Na pregledanim stranicama vide se potpisi. Objavljena kopija ne potvrđuje da su svi ugovoreni radovi završeni niti predstavlja našu provjeru autentičnosti potpisa.",
   "satellite_me": "Pripremljeno je poređenje istog šireg prostora iz septembra 2021, septembra 2025. i oktobra 2026. U 2026. vidi se drugačiji, svjetliji i pravilniji raspored površina između puta i industrijskih hala. To je u skladu sa datiranim izvještajem o radovima, ali ne daje procenat završenosti niti kvalitet vode.",
   "satellite_manifest": "public-export/collector/context_comparison_manifest.json",
-  "source_research_snapshot": "ca24cf5eb617fe0b645c7c8be02d919ff56ce240"
+  "permit_me": "Pribavljen je zvanično objavljeni PDF sa rješenjem od 30. oktobra 2025. i naknadnom ispravkom od 3. februara 2026. Ispravka mijenja godinu u navodu ranijih urbanističkih uslova. Ovo potvrđuje sadržaj objavljenog dokumenta, a ne završetak radova, početak rada postrojenja ili njegov sadašnji pravni status. Precizna granica projekta na satelitskoj karti ostaje neprovjerena.",
+  "permit_source_note_me": "Datum objave u evidenciji je 27. januar 2026. Sada preuzeti PDF sadrži i ispravku od 3. februara 2026. Zato datum objave, datum rješenja i datum sadržaja datoteke treba razlikovati.",
+  "geography_me": "Pribavljeni urbanističko-tehnički uslovi navode iste projektne parcele, ali ne daju nezavisno provjerenu granicu na satelitskoj karti. Dokument za precizno razgraničenje upućuje na elaborat parcelacije ovlašćene geodetske organizacije. Njega nijesmo pribavili."
 }

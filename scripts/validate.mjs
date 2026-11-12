@@ -10,10 +10,10 @@ assert(home.indexOf('id="najvaznije"')>home.indexOf('id="teme"'),"home statistic
 for(const s of ["98.448","31.327","27.535","14.032","Nijedno novo arheološko otkriće nije potvrđeno."]){assert(home.includes(s),"home missing "+s);}
 for(const [page,names] of Object.entries({"istrazivanje.html":["gedi_mjerenja_me.svg","icesat2_mjerenja_me.svg","osjetljivost_pregleda_me.svg","zelenilo_pet_jeseni_me.svg"],"kap-crveni-mulj.html":["kap_jesenji_niz_me.svg","kap_2021_2026_me.svg","kap_proljece_jesen_2026_me.svg"],"kolektor-botun.html":["collector_context_2021_2025_2026_me.svg"],"index.html":["gedi_mjerenja_me.svg","nasadem_relief_me.svg","sentinel_godisnja_doba_me.svg"]})){const s=fs.readFileSync(page,"utf8");for(const x of names){assert(s.includes(x),page+": missing real source visual "+x);assert(fs.statSync("assets/figures/"+x).size>5000,page+": missing image "+x);}}
 const r=JSON.parse(fs.readFileSync("data/research.json","utf8"));const zones=JSON.parse(fs.readFileSync("data/pregled-po-zonama.json","utf8"));const c=JSON.parse(fs.readFileSync("data/kolektor-botun.json","utf8"));const cat=JSON.parse(fs.readFileSync("data/izvori.json","utf8"));
-assert(r.updates.length===18&&r.datasets.length===8,"research records preserved");
+assert(r.updates.length===24&&r.datasets.length===8,"research records preserved");
 assert(zones.zone_data.length===3&&zones.zone_data.reduce((a,x)=>a+x.gedi,0)===98448&&zones.zone_data.reduce((a,x)=>a+x.icesat,0)===27535,"zone totals");
 assert(zones.historic.records.length===6,"historical register");
-assert(c.sources.length===7&&c.human_verified===false,"collector source records");
+assert(c.sources.length===9&&c.human_verified===false,"collector source records");
 assert(cat.entries.length>=16,"source catalogue preserved");
 const map=fs.readFileSync("mapa.html","utf8");
 assert(map.includes('id="research-map"')&&map.includes('data-ring="3000"')&&map.includes('data-ring="10000"'),"map functionality retained");
@@ -25,3 +25,13 @@ assert(js.includes("analysis-notes")&&js.includes("data-viewer")&&js.includes("r
 for(const p of pages){const s=fs.readFileSync(p,"utf8");assert(!/results\/(phase4_|collector_followup|kap_validation_followup)/.test(s),p+": private exploratory paths should not leak");}
 console.log("Provjera gotova: osam stranica, čista navigacija, stvarni prikazi, javni izvori i ograničenja su sačuvani.");
 for(const f of ["gedi_mjerenja_po_zonama_me.svg","icesat2_mjerenja_po_zonama_me.svg"]){const s=fs.readFileSync("assets/figures/"+f,"utf8");assert(s.includes("<svg")&&s.includes("Početni filter")&&s.includes("Brojevi nijesu"),"Source-derived laser chart missing "+f);assert(fs.readFileSync("istrazivanje.html","utf8").includes(f),"Laser chart not visible "+f);}
+
+/* Scientific handoff R019: source-exact laser data, 3D viewer, official scan */
+for(const [filename,n] of [["gedi_points.json",2067],["atl08_points.json",1339]]){const x=JSON.parse(fs.readFileSync("assets/laser-3d/"+filename,"utf8"));assert(x.points.length===n,filename+": wrong native count");assert(x.columns.includes("native_id"),filename+": native ID missing");}
+const m3=JSON.parse(fs.readFileSync("assets/laser-3d/manifest.json","utf8"));assert(m3.human_verified===false&&m3.integration.allow_cross_mission_overlay===false,"3D layers not safely separated");
+assert(fs.statSync("assets/laser-3d/pregled_3d_me.html").size>700000,"3D viewer missing");
+const st3=fs.readFileSync("istrazivanje.html","utf8");assert(st3.includes('id="laser-3d"')&&st3.includes("gedi_3d_me.svg")&&st3.includes("atl08_profil_me.svg"),"Laser 3D or static fallback missing");
+const pmt=fs.readFileSync("kolektor-botun.html","utf8");
+assert(pmt.includes('id="gradjevinska-dozvola"')&&pmt.includes("wapi.gov.me/download/8e3cca0e"),"Official construction permit document missing");
+assert(pmt.includes("30. oktobar 2025.")&&pmt.includes("3. februar 2026."),"Permit/correction dates missing");
+assert(!pmt.includes("potpisani PDF još nije pregledan"),"Stale permit acquisition claim");

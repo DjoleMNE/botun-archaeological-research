@@ -105,10 +105,34 @@
       "url": "https://podgorica.me/javno-obavjestenje-o-pristupu-ugovoru-o-izgradnji-sistema-za-preciscavanje-otpadnih-voda/"
     },
     {
-      "name": "Službeni zapis dozvole; njen PDF još nije pregledan",
-      "status": "specification_only",
-      "description_me": "Postoji javni zapis, ali potpisani dokument i uslovi nijesu preuzeti.",
+      "name": "Službena evidencija građevinske dozvole",
+      "status": "documentary_active",
+      "description_me": "Objavljeni PDF dozvole i ispravke je pribavljen i pregledan; trenutno pravno važenje nije ocjenjivano.",
       "url": "https://www.gov.me/en/documents/671cacb0-b310-4b30-aa8d-e2fd6d68ce68"
+    },
+    {
+      "name": "Vlada Crne Gore — skenirana građevinska dozvola",
+      "status": "documentary_active",
+      "description_me": "Zvanično objavljeni PDF, 10 skeniranih strana, rješenje 2025. i ispravka 2026.",
+      "url": "https://wapi.gov.me/download/8e3cca0e-4b0b-47e5-917d-c0b408f1e0d5?version=1.0"
+    },
+    {
+      "name": "Glavni grad — urbanističko-tehnički uslovi 2020.",
+      "status": "documentary_active",
+      "description_me": "Izvorna dokumentacija povezana sa ispravkom rješenja.",
+      "url": "https://www.sekretarijat-za-plurzs.podgorica.me/wp-content/uploads/2020/09/glavni-grad-podgorica-902.pdf"
+    },
+    {
+      "name": "Prosvjeta 1894. — istorijski pomen",
+      "status": "documentary_active",
+      "description_me": "Istorijski zapis o crkvi Svetog Nikole u Gornjim Kokotima; ne datira izgradnju.",
+      "url": "https://www.dlib.me/fajlovi/p1frueq5gj1j5i16v2gbqei6h4k4.pdf"
+    },
+    {
+      "name": "CETI — izvorni izvještaj",
+      "status": "documentary_active",
+      "description_me": "Opšti dokumentarni položaj bazena KAP-a, ne geodetska potvrda obala.",
+      "url": "https://wapi.gov.me/download/c54b9985-f1ed-45e0-b20c-1ebdb83bdd39?version=1.0"
     }
   ]
 }
