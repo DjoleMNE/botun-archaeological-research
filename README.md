@@ -1,35 +1,26 @@
-# Botun — Tragovi prošlosti
+# Botun — Tragovi iz podataka
 
-A Montenegrin-Latin-only, public-safe static website for an AI-only archaeological remote-sensing pilot. The research was requested by Đorđe Vukčević, who was born and raised in Botun.
+Public GitHub Pages site in Montenegrin Latin for the Botun AI research project.
 
-## Publication status
-This branch is for **review**. Do not merge or publish a new scientific/discovery claim without the project owner's approval. Source repository is public; keep any sensitive archaeological coordinates, access tokens, private correspondence, or candidate registers in `DjoleMNE/botun-research-internal`, never here.
+## Maintainer and authorization
+On13November2026 the owner explicitly transferred website maintenance to the research assistant and requested direct website updates plus a dedicated laser-data page. This supersedes the former two-assistant ownership split. The current agent may implement and publish the requested routine updates. New archaeological discovery claims remain subject to professional assessment and explicit release decisions; none are made here.
 
-## Run locally
-```bash
-python3 -m http.server 8000
-# open http://localhost:8000/
-node scripts/validate.mjs
-```
+Private research, target diagnostics, archives and correspondence stay in `DjoleMNE/botun-research-internal`. Never copy them into this public repository. Preserve provenance through reviewed public exports and exact source-file hashes.
 
-The map uses Leaflet and OpenStreetMap tiles and requires internet access. It shows **planned geographic investigation rings**, not actual continuous LiDAR coverage or archaeological candidate sites.
-
-## Mandatory editorial contract
-- ALL visitor-visible copy is Montenegrin Latin, including accessibility descriptions, charts, map labels, buttons and error messages.
-- Every HTML page carries the complete AI-only / no-human-verification disclaimer, with a shortened reminder in the footer.
-- Scientific dataset numbers are AI-generated research results and have **not** been independently checked by a human.
-- Sources include public NASA GEDI and ICESat-2 data, NASADEM, Copernicus, USGS Landsat, and public national terrain specifications. These providers have NOT endorsed or validated our analysis.
-- The only source of proposed public data updates is the research Work agent's `public-export/research.json` plus scientific handoff; the website maintainer independently reviews it before publication. Internal `_en` descriptions are never rendered.
-- Never imply 98,448 GEDI measurements equal area coverage or archaeological detections. No discoveries are confirmed.
+## Run and verify
+Static HTML/CSS/JavaScript, no build dependencies. Serve the repository root using a local static server, then run `node scripts/validate.mjs`. GitHub Pages serves `main` from the root; `.nojekyll` is retained. The validation workflow checks pages, navigation, disclaimers, baseline counts, public source records, native IDs and exact laser-data hashes.
 
 ## Pages
-`index.html`, `mapa.html`, `istrazivanje.html`, `metod.html`, `dnevnik.html`, `o-projektu.html`, `404.html`.
+- `index.html`: overview
+- `laserski-podaci.html`: dedicated point-only3D viewer, pass selection, accessible table, native-value downloads
+- `istrazivanje.html`: research, source-exact figures and limitations
+- `kap-crveni-mulj.html`: KAP imagery and documentary context
+- `kolektor-botun.html`: wastewater-project imagery and primary documents
+- `mapa.html`: research boundaries, not measured coverage
+- `metod.html`, `o-projektu.html`, `404.html`
 
-## Research coordination
-Read private repository mailbox `coordination/README.md`, then letters in `coordination/to-website/`. Website assistant writes only to `coordination/to-research/`. Keep research and website repository responsibilities separate.
+## Laser data contract
+The new page reuses the exact public R019 GEDI/ATL08 files. It displays the quality-screened eastern example, not the complete10km AOI or unprocessed instrument telemetry. GEDI L2A lowest-mode elevation and ATL08 terrain summaries stay separate. IDs remain strings, native values remain unchanged, display coordinates are documented, empty space stays empty and no ground mesh is created. Downloads distinguish the current filtered choice from the full example of the chosen mission. Raw numerical downloads and existing provider identifiers retain their machine-readable schema.
 
-## Source-data synchronization
-`data/research.json` uses localized `name`, `note`, `title`, and `description` only, plus technical machine-readable IDs/status values. This avoids accidentally leaking English copy onto the site. Validate before merging.
-
-## GitHub Pages
-On GitHub Free, this repository can be public and publish from `main` `/(root)`. Never auto-merge preliminary science. `main` currently is controlled by the owner, and review happens through a PR.
+## Editorial contract
+All visitor-visible prose, labels, controls, errors and accessibility descriptions are plain Montenegrin Latin. Every page identifies AI-only authorship at Đorđe's request, public sources and lack of human verification. Source agencies do not endorse this analysis. No confirmed discoveries, unsupported confidence percentages or sensitive target coordinates. See `docs/EDITORIAL_POLICY.md` and `docs/R021_WEBSITE_UPDATE.md`.

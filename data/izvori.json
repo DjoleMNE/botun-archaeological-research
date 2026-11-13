@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-11",
+  "updated_at": "2026-11-13",
   "human_verified": false,
   "entries": [
     {
@@ -133,6 +133,12 @@
       "status": "documentary_active",
       "description_me": "Opšti dokumentarni položaj bazena KAP-a, ne geodetska potvrda obala.",
       "url": "https://wapi.gov.me/download/c54b9985-f1ed-45e0-b20c-1ebdb83bdd39?version=1.0"
+    },
+    {
+      "name": "Andrija Jovićević — Zeta i Lješkopolje",
+      "status": "documentary_active",
+      "description_me": "Pročitana je skenirana stranica sa ranijim opisom Divana. Javno dostupna kopija iz zbirke knjiga; opis i predanja ne potvrđuju starost ostataka niti novo otkriće.",
+      "url": "https://sites.google.com/view/knjigepl/%D0%BA%D1%9A%D0%B8%D0%B3%D0%B5-1"
     }
   ]
 }

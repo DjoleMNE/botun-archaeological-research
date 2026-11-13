@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12",
+  "updated_at": "2026-11-13",
   "datasets": [
     {
       "id": "gedi",
@@ -47,14 +47,14 @@
       "id": "worldcover2021",
       "name": "ESA WorldCover 2021",
       "status": "in_progress",
-      "note": "Karta pokrivača zemljišta iz 2021. godine preuzeta je i prikazana na sajtu. Ne dokazuje arheološke ostatke.",
+      "note": "Karta pokrivača zemljišta iz 2021. preuzeta je i uključena na sajt. Automatska procjena može pogriješiti i ne predstavlja današnje stanje, vlasništvo ili arheološke nalaze.",
       "source_url": "https://esa-worldcover.org/en/data-access"
     },
     {
       "id": "jrcwater",
       "name": "Istorija površinskih voda",
       "status": "in_progress",
-      "note": "Karta istorijske površinske vode 1984–2024. prikazana je na sajtu. Ne pokazuje podzemnu vodu ni zagađenje.",
+      "note": "Karta istorijske učestalosti površinske vode 1984–2024. preuzeta je i uključena na sajt. Ne prikazuje današnju vodu, njenu hemiju, podzemnu vodu ili rizik od poplave.",
       "source_url": "https://global-surface-water.appspot.com/download"
     }
   ],
@@ -152,7 +152,7 @@
     {
       "date": "2026-11-12",
       "title": "Stvarna laserska mjerenja u 3D",
-      "description": "Pripremili smo rotirajući prikaz 2.067 GEDI mjerenja i 1.339 ICESat-2 zapisa iz jednog primjera u istraživanom području. Izvore prikazujemo odvojeno. Možete pročitati visinu i datum svakog zapisa, a praznine ostaju praznine. Ovo nije detaljan snimak cijelog terena niti karta arheoloških nalaza. Podaci su provjereni računarski; 3D pregled je sada uključen na sajt; nezavisan pregled stvarnog mobilnog prikaza još je otvoren."
+      "description": "Pripremili smo rotirajući prikaz 2.067 GEDI mjerenja i 1.339 ICESat-2 zapisa iz jednog primjera u istraživanom području. Izvore prikazujemo odvojeno, a praznine ostaju praznine. Ovo nije detaljan snimak cijelog terena niti karta arheoloških nalaza. Naknadna provjera objavljenog prikaza opisana je u ažuriranju od 13. novembra."
     },
     {
       "date": "2026-11-12",
@@ -178,6 +178,21 @@
       "date": "2026-11-12",
       "title": "Kolektor: pročitan je dokument građevinske dozvole",
       "description": "Pribavljen je zvanično objavljeni PDF sa rješenjem od 30. oktobra 2025. i naknadnom ispravkom od 3. februara 2026. Ispravka mijenja godinu u navodu ranijih urbanističkih uslova. Ovo potvrđuje sadržaj objavljenog dokumenta, a ne završetak radova, početak rada postrojenja ili njegov sadašnji pravni status. Precizna granica projekta na satelitskoj karti ostaje neprovjerena."
+    },
+    {
+      "date": "2026-11-13",
+      "title": "3D prikaz je objavljen i pregledan na računaru",
+      "description": "Na sajtu su dostupna stvarna laserska mjerenja. AI provjera u Chrome pregledaču potvrdila je promjenu izvora, izbor datuma prolaza, okretanje, uvećanje i čitanje odabrane tačke. Prikaz i dalje ostavlja praznine tamo gdje nema mjerenja. Rad na telefonu i potpuna pristupačnost još nijesu provjereni. Ovo nije ljudska ni arheološka potvrda."
+    },
+    {
+      "date": "2026-11-13",
+      "title": "Stariji opis Divana pročitan u skeniranom djelu",
+      "description": "Pročitali smo stranicu 385 djela Andrije Jovićevića „Zeta i Lješkopolje“, na koju se poziva noviji naučni rad. Autor opisuje Divan i prenosi narodna predanja. To je raniji pisani opis, a ne novo otkriće ovog projekta. Tekst ne utvrđuje starost ostataka, njihove današnje granice ni vezu sa našim laserskim mjerenjima. Kopija je preuzeta iz javno dostupne zbirke knjiga; nalaz nije provjerio čovjek."
+    },
+    {
+      "date": "2026-11-13",
+      "title": "Zaseban pregled laserskih mjerenja",
+      "description": "Pripremljena je stranica sa stvarnim NASA zapisima u 3D, izborom prolaza, tabelom i preuzimanjem izabranih podataka. Prikazuje odabrani dio područja i zapise koji prolaze početnu provjeru. To su vrijednosti iz NASA proizvoda, a ne neobrađeni signali instrumenta. Nema nacrtane površine između tačaka ni označenih arheoloških nalaza. Rezultate nije provjerio čovjek."
     }
   ]
 }

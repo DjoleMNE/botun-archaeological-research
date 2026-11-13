@@ -17,4 +17,5 @@ The disclaimer must remain legible near the top of EVERY page including 404. A s
 - Scientific figures with embedded English labels need localization prior to site use.
 
 ## Review
-Do not modify `main` for scientific updates until user review/approval. New datasets must preserve provenance and disclose limitations in human-friendly wording.
+The owner authorized direct maintenance and this laser-page publication on 13 November 2026, superseding the former separate-assistant review workflow. Routine authorized updates may go to main after appropriate checks. New archaeological discovery claims still require professional assessment and an explicit release decision. New datasets must preserve provenance and disclose limitations in human-friendly wording.
+
